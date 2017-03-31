@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <prdt-selected-label_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="products selected"
+                        fieldDescription="The label for selected products. (e.g. products selected)"
+                        fieldLabel="Label for Products Selected"
+                        name="./prdt-selected-label_t"
+                        xtype="textfield"/>
+                    <prdt-clear-all-label_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="clear all selection"
+                        fieldDescription="The label for clearing all selected products. (e.g. clear all selection)"
+                        fieldLabel="Label for Clear All"
+                        name="./prdt-clear-all-label_t"
+                        xtype="textfield"/>
+                    <prdt-compare-cta-text_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="compare"
+                        fieldDescription="The CTA text for Compare button."
+                        fieldLabel="CTA Text for Compare"
+                        name="./prdt-compare-cta-text_t"
+                        xtype="textfield"/>
+                    <prdt-compare-path
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The path to Compare Selected Products."
+                        fieldLabel="Compare Products Path"
+                        name="./prdt-compare-path"
+                        xtype="pathfield"/>
+                    <prdt-compare-max
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="4"
+                        fieldDescription="The max numbers of products to compare."
+                        fieldLabel="Max No. of Products"
+                        name="./prdt-compare-max"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="3"/>
+                            <four
+                                jcr:primaryType="nt:unstructured"
+                                text="4"
+                                value="4"/>
+                        </options>
+                    </prdt-compare-max>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

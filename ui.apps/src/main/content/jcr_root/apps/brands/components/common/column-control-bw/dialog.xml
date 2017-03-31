@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <cols
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The numbers of columns to split the parsys into multiple parsys."
+                        fieldLabel="Columns"
+                        name="./cols"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <cols2
+                                jcr:primaryType="nt:unstructured"
+                                text="2 (1:1)"
+                                value="cols2"/>
+                            <cols2a
+                                jcr:primaryType="nt:unstructured"
+                                text="3 (2:1)"
+                                value="cols2a"/>
+                            <cols2b
+                                jcr:primaryType="nt:unstructured"
+                                text="3 (1:2)"
+                                value="cols2b"/>
+                            <cols3
+                                jcr:primaryType="nt:unstructured"
+                                text="3 (1:1:1)"
+                                value="cols3"/>
+                            <cols4
+                                jcr:primaryType="nt:unstructured"
+                                text="4 (1:1:1:1)"
+                                value="cols4"/>
+                        </options>
+                    </cols>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

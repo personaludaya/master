@@ -1,0 +1,6 @@
+#base=source
+
+widgets/form/MultiCompositeField.js
+widgets/form/RichText.js
+widgets/form/MultiFieldPanel.js
+widgets/form/MaxTags.js

@@ -1,0 +1,53 @@
+[{
+    "value": "background-full-image",
+    "text": "background-full-image"
+  },{
+    "value": "background-normal-image",
+    "text": "background-normal-image"
+  },{
+    "value": "background-cover-image",
+    "text": "background-cover-image"
+  },{
+    "value": "background-cover-image-fixed",
+    "text": "background-cover-image-fixed"
+  },{
+    "value": "background-contain-image",
+    "text": "background-contain-image"
+  },{
+    "value": "background-contain-image-normal-xs",
+    "text": "background-contain-image-normal-xs"
+  },{
+    "value": "background-cover-image-center",
+    "text": "background-cover-image-center"
+  },{
+    "value": "background-cover-image-center-bottom",
+    "text": "background-cover-image-center-bottom"
+  },{
+    "value": "primary-background-color",
+    "text": "primary-background-color"
+  },{
+    "value": "secondary-background-color",
+    "text": "secondary-background-color"
+  },{
+    "value": "primary-background-color-full",
+    "text": "primary-background-color-full"
+  },{
+    "value": "gradient-background",
+    "text": "gradient-background"
+  },{
+    "value": "border-primary-color",
+    "text": "border-primary-color"
+  },{
+    "value": "border-secondary-color",
+    "text": "border-secondary-color"
+  },{
+    "value": "background-cover-image border-secondary-color",
+    "text": "background-cover-image border-secondary-color"
+  },{
+    "value": "primary-background-color border-secondary-color",
+    "text": "primary-background-color border-secondary-color"
+  },{
+    "value": "primary-background-color store-location-container",
+    "text": "primary-background-color store-location-container"
+  }
+]

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                	<faq-category-tags
+                    	jcr:primaryType="cq:Widget"
+                        fieldDescription="Tags to appear for selection"
+                        fieldLabel="Category Tags"
+                        name="./faq-category-tags"
+                        xtype="multifield">
+                        <fieldConfig
+					        jcr:primaryType="cq:Widget"
+				        	xtype="multifieldpanel">
+					        <items jcr:primaryType="cq:WidgetCollection">
+					        	<category-tag
+					            	jcr:primaryType="cq:Widget"
+					                fieldLabel="Tag"
+					                key="tag"
+					                namespaces="[brands]"
+					                eaemMaxTags="1"
+					                xtype="tags"/>
+					        </items>
+					    </fieldConfig>
+					</faq-category-tags>
+					<faq-default-selection
+	                    jcr:primaryType="cq:Widget"
+	                    cls="cq-propsdialog-tags"
+	                    fieldLabel="Default Selected Tags"
+	                    fieldDescription="Tags to be selected on page load"
+	                    name="./faq-default-selection"
+	                    namespaces="[brands]"
+	                    eaemMaxTags="1"
+	                    xtype="tags"/>
+					<faq-config-path
+                    	jcr:primaryType="cq:Widget"
+                    	allowBlank="{Boolean}false"
+                    	fieldLabel="Path to FAQ config Page"
+                    	name="./faq-config-path"
+                    	xtype="pathfield"/>
+                   	<faq-expand-icon
+	                    jcr:primaryType="cq:Widget"
+	                    fieldDescription="The expand accordion SVG icon."
+	                    fieldLabel="Expand Icon"
+	                    name="./faq-expand-icon"
+	                    optionsProvider="CQ.utils.Css.getIconStyleList"
+	                    type="select"
+	                    xtype="selection"/>
+	                <faq-collapse-icon
+	                    jcr:primaryType="cq:Widget"
+	                    fieldDescription="The collapse accordion SVG icon."
+	                    fieldLabel="Collapse Icon"
+	                    name="./faq-collapse-icon"
+	                    optionsProvider="CQ.utils.Css.getIconStyleList"
+	                    type="select"
+	                    xtype="selection"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,11 @@
+[{
+    "value": "retailprice",
+    "text": "Retail Price"
+  },{
+    "value": "specialprice",
+    "text": "Special Price"
+  },{
+    "value": "boxof6from",
+    "text": "Box of 6 from"
+  }
+]

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="650"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <admin
+                jcr:primaryType="cq:Panel"
+                title="Admin">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <cpgn-carousel-background-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Campaign Background Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <cpgn-carousel-background-img
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldLabel="Campaign Background Image Path"
+                                name="./cpgn-carousel-background-img"
+                                xtype="pathfield"/>
+                            <cpgn-carousel-bkgrd-style
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Campaign Background Style"
+                                name="./cpgn-carousel-bkgrd-style"
+                                optionsProvider="CQ.utils.Css.getPageBackgroundStyleList"
+                                type="select"
+                                xtype="selection"/>
+                        </items>
+                    </cpgn-carousel-background-config>
+                    <cpgn-carousel-content-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Campaign Header, Copy and CTA Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <cpgn-carousel-main-header_t
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Main Header of the campaign, displayed near the top center of the Campaign."
+                                fieldLabel="Campaign Main Header"
+                                name="./cpgn-carousel-main-header_t"
+                                xtype="textfield"/>
+                            <cpgn-carousel-main-header-size
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                defaultValue="h2"
+                                fieldLabel="Campaign Main Header Size"
+                                name="./cpgn-carousel-main-header-size"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h4"
+                                        value="h4"/>
+                                    <h5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h5"
+                                        value="h5"/>
+                                </options>
+                            </cpgn-carousel-main-header-size>
+                            <cpgn-carousel-sub-header_t
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="Sub-Header of the campaign, displayed below the Main Header."
+                                fieldLabel="Campaign Sub-Header"
+                                name="./cpgn-carousel-sub-header_t"
+                                xtype="textfield"/>
+                            <cpgn-carousel-sub-header-size
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                defaultValue="h3"
+                                fieldLabel="Campaign Sub-Header Size"
+                                name="./cpgn-carousel-sub-header-size"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h4"
+                                        value="h4"/>
+                                    <h5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h5"
+                                        value="h5"/>
+                                </options>
+                            </cpgn-carousel-sub-header-size>
+                            <cpgn-carousel-overview_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Overview of the campaign, displayed below the Sub-Header."
+                                fieldLabel="Campaign Overview"
+                                name="./cpgn-carousel-overview_t"
+                                xtype="textarea"/>
+                            <cpgn-carousel-cta-path
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="CTA of the campaign, displayed below Overview."
+                                fieldLabel="Campaign CTA Path"
+                                name="./cpgn-carousel-cta-path"
+                                xtype="pathfield"/>
+                            <cpgn-carousel-cta-text_t
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Campaign CTA Text"
+                                name="./cpgn-carousel-cta-text_t"
+                                xtype="textfield"/>
+                            <cpgn-carousel-cta-open-new-win
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Check if the CTA is to be opened in new window."
+                                fieldLabel="Campaign CTA Open New Window"
+                                name="./cpgn-carousel-cta-open-new-win"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </items>
+                    </cpgn-carousel-content-config>
+                    <cpgn-carousel-pri-img-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Campaign Primary Image Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <cpgn-carousel-pri-img
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This image will be displayed on the left side of the Campaign."
+                                fieldLabel="Campaign Primary Img Path"
+                                name="./cpgn-carousel-pri-img"
+                                xtype="pathfield"/>
+                            <cpgn-carousel-pri-img-alt-txt_t
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Campaign Primary Img Alt Text"
+                                name="./cpgn-carousel-pri-img-alt-txt_t"
+                                xtype="textfield"/>
+                            <cpgn-carousel-pri-header_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This header will be displayed near the bottom right of the Primary Image."
+                                fieldLabel="Campaign Primary Img Info Header"
+                                name="./cpgn-carousel-pri-header_t"
+                                xtype="textfield"/>
+                            <cpgn-carousel-pri-header-size
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="h5"
+                                fieldLabel="Campaign Primary Img Info Header Size"
+                                name="./cpgn-carousel-pri-header-size"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h4"
+                                        value="h4"/>
+                                    <h5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h5"
+                                        value="h5"/>
+                                </options>
+                            </cpgn-carousel-pri-header-size>
+                            <cpgn-carousel-pri-descr_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This description will be displayed near the bottom right of the Primary Image after the header."
+                                fieldLabel="Campaign Primary Img Info Description"
+                                name="./cpgn-carousel-pri-descr_t"
+                                xtype="textarea"/>
+                        </items>
+                    </cpgn-carousel-pri-img-config>
+                    <cpgn-carousel-sec-img-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Campaign Secondary Image Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <cpgn-carousel-sec-img
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This image will be displayed on the bottom right of the Campaign."
+                                fieldLabel="Campaign Secondary Img Path"
+                                name="./cpgn-carousel-sec-img"
+                                xtype="pathfield"/>
+                            <cpgn-carousel-sec-img-alt-txt_t
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Campaign Secondary Img Alt Text"
+                                name="./cpgn-carousel-sec-img-alt-txt_t"
+                                xtype="textfield"/>
+                            <cpgn-carousel-sec-descr_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This description will be displayed below the Secondary Image."
+                                fieldLabel="Campaign Secondary Img Description"
+                                name="./cpgn-carousel-sec-descr_t"
+                                xtype="textarea"/>
+                        </items>
+                    </cpgn-carousel-sec-img-config>
+                </items>
+            </admin>
+        </items>
+    </items>
+</jcr:root>

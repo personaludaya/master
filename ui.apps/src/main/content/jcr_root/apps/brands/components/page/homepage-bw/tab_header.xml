@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Header">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <site-config
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Site Configuration"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <logo-alt_t
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Logo Alt Text"
+                    name="./logo-alt_t"
+                    xtype="textfield"/>
+                <logo-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Logo path"
+                    name="./logo-path"
+                    xtype="pathfield"/>
+                <search-result-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Search Result path"
+                    name="./search-result-path"
+                    xtype="pathfield"/>
+                <customer-svc-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Customer Service path"
+                    name="./custsvc-path"
+                    xtype="pathfield"/>
+                <store-location-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Store Location path"
+                    name="./store-location-path"
+                    xtype="pathfield"/>
+                <compare-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Compare Page path"
+                    name="./compare-path"
+                    xtype="pathfield"/>
+                <products-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Our Products path"
+                    name="./products-path"
+                    xtype="pathfield"/>
+                <faq-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="FAQ path"
+                    name="./faq-path"
+                    xtype="pathfield"/>
+                <be-magazine-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="BE Magazine path"
+                    name="./be-magazine-path"
+                    xtype="pathfield"/>
+                <ecstore-promotions-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="EC Store Promotion path"
+                    name="./ecstore-promotions-path"
+                    xtype="pathfield"/>
+                <error-404-path
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Error 404 path"
+                    name="./error-404-path"
+                    xtype="pathfield"/>
+            </items>
+        </site-config>
+        <top-bar
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Top Bar"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <root-path
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="E.g. /content/brands"
+                    fieldLabel="Root Path"
+                    name="./root-path"
+                    xtype="pathfield"/>
+                <top-bar-paths
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Top Bar Paths"
+                    name="./top-bar-paths"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        xtype="pathfield"/>
+                </top-bar-paths>
+            </items>
+        </top-bar>
+        <top-navigation
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Top Navigation"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <top-nav-path
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Admin configuration path for top navigation"
+                    fieldLabel="Top Navigation Path"
+                    name="./top-nav-path"
+                    xtype="pathfield"/>
+                <top-nav-cta-path
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Configuration for the button on the right side of the navigation section"
+                    fieldLabel="CTA Button Path"
+                    name="./top-nav-cta-path"
+                    xtype="pathfield"/>
+                <top-nav-cta-text
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Configuration for the button on the right side of the navigation section"
+                    fieldLabel="CTA Button Text"
+                    name="./top-nav-cta-text_t"
+                    xtype="textfield"/>
+                <top-nav-cta-new-win
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Check to open CTA in new window"
+                    fieldLabel="Open in new window"
+                    name="./top-nav-cta-new-win"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </top-navigation>
+        <key-messaging-area
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Key Messaging Area"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <cookie-header_t
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Cookie Notice Header"
+                    name="./cookie-header_t"
+                    xtype="textfield"/>
+                <cookie-msg_t
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Cookie Notice Message"
+                    name="./cookie-msg_t"
+                    xtype="richtext"/>
+            </items>
+        </key-messaging-area>
+    </items>
+</jcr:root>

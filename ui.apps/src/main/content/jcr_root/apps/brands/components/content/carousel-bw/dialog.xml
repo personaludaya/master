@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="Carousel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <timing
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The number of seconds before each element changes. The default value is 7; the minimum value is 5. If value is lesser than 5, there's no autoplay."
+                        fieldLabel="Timing"
+                        name="./timing"
+                        xtype="numberfield"/>
+                    <carousel
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The carousel elements.&#xa;Allow up to 5 x instances."
+                        fieldLabel="Carousel"
+                        name="./carousel"
+                        xtype="multicompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <img-path
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The image path."
+                                fieldLabel="Image path"
+                                name="img-path"
+                                xtype="pathfield"/>
+                            <img-alt_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The image alternate text."
+                                fieldLabel="Image Alt Text"
+                                name="img-alt_t"
+                                xtype="textfield"/>
+                            <video-id
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The video id from YouTube. E.g. AWbJ9Pbm97s"
+                                fieldLabel="Video ID"
+                                name="video-id"
+                                xtype="textfield"/>
+                            <video-title_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The video title."
+                                fieldLabel="Video Title"
+                                name="video-title_t"
+                                xtype="textfield"/>
+                            <caption_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The caption copy for the image or the video"
+                                fieldLabel="Caption"
+                                name="caption_t"
+                                xtype="textfield"/>
+                        </fieldConfigs>
+                    </carousel>
+                    
+                </items>
+            </content>
+            <content-custom
+                jcr:primaryType="cq:Panel"
+                title="Custom Carousel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <carousel-freeform
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The freeform content. &#xa;If this is populated, it will overrule the other properties and will be used instead."
+                        fieldLabel="Freeform Content"
+                        height="200"
+                        name="./carousel-freeform"
+                        xtype="textarea"/>
+                </items>
+            </content-custom>
+        </items>
+    </items>
+</jcr:root>

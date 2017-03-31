@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <bemag-signposts
+                jcr:primaryType="cq:Panel"
+                title="Be Magazine Page Signpost">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bemag-signpost-paths
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The Be Magazine page signpost paths."
+                        fieldLabel="Be Magazine Page Signpost Paths"
+                        name="./bemag-signpost-paths"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="pathfield"/>
+                    </bemag-signpost-paths>
+					<hide-category
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check if this should be hidden."
+						fieldLabel="Hide Category"
+						name="./hide-category"
+						type="checkbox"
+						xtype="selection"/>
+                </items>
+            </bemag-signposts>
+            <prdt-signpost
+                jcr:primaryType="cq:Panel"
+                title="Product Signpost">
+                <items jcr:primaryType="cq:WidgetCollection">
+                     <content-signpost-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The product signpost path."
+                        fieldLabel="Product Signpost Path"
+                        name="./prdt-signpost-path"
+                        xtype="pathfield" />
+                </items>
+            </prdt-signpost>
+             <content-signpost
+                jcr:primaryType="cq:Panel"
+                title="Content Signpost">
+                <items jcr:primaryType="cq:WidgetCollection">
+                     <content-signpost-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content signpost path."
+                        fieldLabel="Content Signpost Path"
+                        name="./content-signpost-path"
+                        xtype="pathfield" />
+                </items>
+            </content-signpost>
+        </items>
+    </items>
+</jcr:root>

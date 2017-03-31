@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <compare-prdt-header-config
+                jcr:primaryType="cq:Panel"
+                title="Main Header Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <compare-prdt-header_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Header for Product Comparison, you may insert position of number to display within Header using ##num##. (e.g. Compare ##num## Products)"
+                        fieldLabel="Header Title"
+                        name="./compare-prdt-header_t"
+                        xtype="textfield"/>
+                    <compare-prdt-header-size
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="h1"
+                        fieldLabel="Header Size"
+                        name="./compare-prdt-header-size"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="h1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="h2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="h3"
+                                value="h3"/>
+                            <h4
+                                jcr:primaryType="nt:unstructured"
+                                text="h4"
+                                value="h4"/>
+                            <h5
+                                jcr:primaryType="nt:unstructured"
+                                text="h5"
+                                value="h5"/>
+                        </options>
+                    </compare-prdt-header-size>
+                    <compare-prdt-header-alignment
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="text-center"
+                        fieldLabel="Header Alignment"
+                        name="./compare-prdt-header-alignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value=""/>
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="text-left"/>
+                            <center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="text-center"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="text-right"/>
+                        </options>
+                    </compare-prdt-header-alignment>
+                    <compare-prdt-header-style
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Header Style"
+                        name="./compare-prdt-header-style"
+                        optionsProvider="CQ.utils.Css.getHeaderStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <compare-prdt-cta-config
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+                        xtype="cqinclude"/>
+                </items>
+            </compare-prdt-header-config>
+            <compare-prdt-config
+                jcr:primaryType="cq:Panel"
+                title="Product Comparison Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <compare-prdt-disclaimer
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="All information below when chosen to display will be retrieved from Product Page under the configured Parent Product Path."
+                        fieldLabel="Note"
+                        xtype="displayfield"/>
+                    <prdt-root-path
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The parent path where all Product Pages are created under."
+                        fieldLabel="Parent Product Path"
+                        name="./prdt-root-path"
+                        xtype="pathfield"/>
+                    <prdt-open-new-win
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check if the Product Title and Image is to be opened in new window."
+                        fieldLabel="Product Open New Window"
+                        name="./prdt-open-new-win"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-display-img
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Product Image in comparison."
+                        fieldLabel="Display Image?"
+                        name="./compare-display-img"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-display-title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Product Title in comparison."
+                        fieldLabel="Display Product Title?"
+                        name="./compare-display-title"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-display-ec-cta
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Ecommerce CTA in comparison."
+                        fieldLabel="Display Ecommerce CTA?"
+                        name="./compare-display-ec-cta"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-ec-cta-text_t
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="buynow"
+                        fieldDescription="If CTA Ecommerce is to be displayed, the CTA text to be displayed. (e.g. buy now)"
+                        fieldLabel="CTA Text to Ecommerce"
+                        name="./compare-ec-cta-text_t"
+                        optionsProvider="CQ.utils.Css.getCtaTextList"
+                        type="select"
+                        xtype="selection"/>
+                    <compare-display-price
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Product Price information in comparison."
+                        fieldLabel="Display Price Information?"
+                        name="./compare-display-price"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-price-title_t
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Price"
+                        fieldDescription="The title for Pricing Details section."
+                        fieldLabel="Price Section Title"
+                        name="./compare-price-title_t"
+                        xtype="textfield"/>
+                    <compare-display-lifestage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Product Life Stage in comparison."
+                        fieldLabel="Display Life Stage?"
+                        name="./compare-display-lifestage"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-lifestage-title_t
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Suitable for"
+                        fieldDescription="The title for Life Stage section."
+                        fieldLabel="Life Stage Section Title"
+                        name="./compare-lifestage-title_t"
+                        xtype="textfield"/>
+                    <compare-display-ingredients
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Product Ingredients in comparison."
+                        fieldLabel="Display Ingredients?"
+                        name="./compare-display-ingredients"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-display-ingredients-vol
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Ingredient's Volume used in Product in comparison."
+                        fieldLabel="Display Ingredient's Volume?"
+                        name="./compare-display-ingredients-vol"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-ingredients-title_t
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Ingredients"
+                        fieldDescription="The title for Ingredients section."
+                        fieldLabel="Ingredients Section Title"
+                        name="./compare-ingredients-title_t"
+                        xtype="textfield"/>
+                    <compare-display-nutri-info
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="{Boolean}true"
+                        fieldDescription="Check this to display Product Nutritional Information in comparison."
+                        fieldLabel="Display Nutritional Info?"
+                        name="./compare-display-nutri-info"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <compare-nutri-info-title_t
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Nutritional information"
+                        fieldDescription="The title for Nutritional Information section."
+                        fieldLabel="Nutritional Information Section Title"
+                        name="./compare-nutri-info-title_t"
+                        xtype="textfield"/>
+                </items>
+            </compare-prdt-config>
+            <compare-prdt-free-config
+                jcr:primaryType="cq:Panel"
+                title="Comparison Free Column Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <compare-free-col-disclaimer
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The path for CTA Button will be the same as CTA Path configured in Main Header Configuration tab."
+                        fieldLabel="Note"
+                        xtype="displayfield"/>
+                    <compare-free-col-btn-icon
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="icon-white"
+                        fieldLabel="Button Icon"
+                        name="./compare-free-col-btn-icon"
+                        optionsProvider="CQ.utils.Css.getIconList"
+                        type="select"
+                        xtype="selection"/>
+                    <compare-free-col-btn-icon-style
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="icon-plus-secondary"
+                        fieldLabel="Button Icon Style"
+                        name="./compare-free-col-btn-icon-style"
+                        optionsProvider="CQ.utils.Css.getIconStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <compare-free-col-descr_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The description displayed below the CTA button of the free column for product comparison. (e.g. Add another product to compare)"
+                        fieldLabel="Free Column CTA Description"
+                        name="./compare-free-col-descr_t"
+                        xtype="textfield"/>
+                </items>
+            </compare-prdt-free-config>
+        </items>
+    </items>
+</jcr:root>

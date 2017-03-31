@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+        	<general
+	        	jcr:primaryType="cq:Widget"
+	            path="/apps/brands/components/admin/footer-admin-bw/dialog-general.infinity.json"
+	            xtype="cqinclude"/>
+        	<leftlist-config
+                jcr:primaryType="cq:Panel"
+                title="Left List Config">
+                <items jcr:primaryType="cq:WidgetCollection">
+                	<left-list
+				        jcr:primaryType="cq:Widget"
+				        fieldDescription="Left Side Item"
+				        fieldLabel="Left Side Item"
+				        name="./leftList"
+				        xtype="multicompositefield">
+				        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+				            <itemType
+				                jcr:primaryType="cq:Widget"
+				                fieldDescription="The item type (e.g. header, divider, cta)"
+				                fieldLabel="Item Type"
+				                name="item-type"
+				                xtype="selection"
+				                type="select">
+				                <options jcr:primaryType="cq:WidgetCollection">
+				                    <typeHeader
+				                        jcr:primaryType="nt:unstructured"
+				                        text="Header"
+				                        value="header"/>
+				                    <typeSectStart
+				                        jcr:primaryType="nt:unstructured"
+				                        text="Section Start"
+				                        value="section-start"/>
+				                    <typeCta
+				                        jcr:primaryType="nt:unstructured"
+				                        text="CTA"
+				                        value="cta"/>
+				                	<typeSectEnd
+				                        jcr:primaryType="nt:unstructured"
+				                        text="Section End"
+				                        value="section-end"/>
+				                </options>
+				            </itemType>
+				            <itemVal
+				                jcr:primaryType="cq:Widget"
+				                fieldDescription="The item value (for header and cta only)"
+				                fieldLabel="Item Value"
+				                name="item-value"
+				                xtype="pathfield"/>
+			        		<tem-anchor
+				                jcr:primaryType="cq:Widget"
+				                fieldDescription="The anchor value to append to URL. Please omit '#' (for cta only)"
+				                fieldLabel="CTA anchor"
+				                name="item-anchor"
+				                xtype="textfield"/>
+			        		<item-altname
+				                jcr:primaryType="cq:Widget"
+				                fieldLabel="Alternate name"
+				                fieldDescription="Alternative name to display as link label. For scenarios where links go to a page with anchor. Defaults to link AEM page's title if this field is left blank."
+				                name="item-altname"
+				                xtype="textfield"/>
+			        		<cta-newtab
+				                jcr:primaryType="cq:Widget"
+				                fieldLabel="Open link in new tab? "
+				                name="cta-newtab"
+				                xtype="selection"
+				                type="checkbox"/>
+			        	</fieldConfigs>
+			        </left-list>
+                </items>
+            </leftlist-config>
+            <rightlist-config
+                jcr:primaryType="cq:Panel"
+                title="Right List Config">
+                <items jcr:primaryType="cq:WidgetCollection">
+                	<right-list
+				        jcr:primaryType="cq:Widget"
+				        fieldDescription="Right Side Item"
+				        fieldLabel="Right Side Item"
+				        name="./rightList"
+				        xtype="multicompositefield">
+				        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+				            <itemType
+				                jcr:primaryType="cq:Widget"
+				                fieldDescription="The item type (e.g. header, divider, cta)"
+				                fieldLabel="Item Type"
+				                name="item-type"
+				                xtype="selection"
+				                type="select">
+				                <options jcr:primaryType="cq:WidgetCollection">
+				                    <typeHeader
+				                        jcr:primaryType="nt:unstructured"
+				                        text="Header"
+				                        value="header"/>
+				                    <typeSectStart
+				                        jcr:primaryType="nt:unstructured"
+				                        text="Section Start"
+				                        value="section-start"/>
+				                    <typeCta
+				                        jcr:primaryType="nt:unstructured"
+				                        text="CTA"
+				                        value="cta"/>
+				                	<typeSectEnd
+				                        jcr:primaryType="nt:unstructured"
+				                        text="Section End"
+				                        value="section-end"/>
+				                </options>
+				            </itemType>
+				            <itemVal
+				                jcr:primaryType="cq:Widget"
+				                fieldDescription="The item value (for header and cta only)"
+				                fieldLabel="Item Value"
+				                name="item-value"
+				                xtype="pathfield"/>
+			        		<item-anchor
+				                jcr:primaryType="cq:Widget"
+				                fieldDescription="The anchor value to append to URL. Please omit '#' (for cta only)"
+				                fieldLabel="CTA anchor"
+				                name="item-anchor"
+				                xtype="textfield"/>
+			        		<item-altname
+				                jcr:primaryType="cq:Widget"
+				                fieldLabel="Alternate name"
+				                fieldDescription="Alternative name to display as link label. For scenarios where links go to a page with anchor. Defaults to link AEM page's title if this field is left blank."
+				                name="item-altname"
+				                xtype="textfield"/>
+			        		<cta-newtab
+				                jcr:primaryType="cq:Widget"
+				                fieldLabel="Open link in new tab? "
+				                name="cta-newtab"
+				                xtype="selection"
+				                type="checkbox"/>
+			        	</fieldConfigs>
+			        </right-list>
+                </items>
+            </rightlist-config>
+            <mobile
+	        	jcr:primaryType="cq:Widget"
+	            path="/apps/brands/components/admin/footer-admin-bw/dialog-mobile.infinity.json"
+	            xtype="cqinclude"/>
+            
+        </items>
+    </items>
+</jcr:root>

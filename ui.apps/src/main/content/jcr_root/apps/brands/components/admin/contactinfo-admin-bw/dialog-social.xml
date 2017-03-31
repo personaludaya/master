@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    anchor="100%"
+    title="Social"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">     
+    	<followUsLabel
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Follow Us Label"
+	        fieldDescription="The label for 'Follow Us'"
+	        name="./followUsLabel_t"
+	        xtype="textfield"/>        
+        <social-share
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Social Share"
+	        name="./socialShare"
+	        xtype="multicompositefield">
+	        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+	            <social-icon
+	                jcr:primaryType="cq:Widget"
+	                allowBlank="false"
+	                fieldLabel="Social Icon"
+	                name="social-icon"
+	                type="select"
+	                xtype="selection">
+	                <options jcr:primaryType="cq:WidgetCollection">
+	                    <fb
+	                        jcr:primaryType="nt:unstructured"
+	                        text="Facebook"
+	                        value="icon-facebook"/>
+	                    <twit
+	                        jcr:primaryType="nt:unstructured"
+	                        text="Twitter"
+	                        value="icon-twitter"/>
+	                	<insta
+	                        jcr:primaryType="nt:unstructured"
+	                        text="Instagram"
+	                        value="icon-instagram"/>
+	                </options>
+	            </social-icon>
+	            <socialName_t
+	                jcr:primaryType="cq:Widget"
+	                fieldLabel="Social Name"
+	                name="social-name_t"
+	                xtype="textfield"/>
+	            <socialUrl
+	                jcr:primaryType="cq:Widget"
+	                fieldLabel="Social URL"
+	                name="social-url"
+	                xtype="pathfield"/>
+	        </fieldConfigs>
+	    </social-share>
+    </items>
+</jcr:root>

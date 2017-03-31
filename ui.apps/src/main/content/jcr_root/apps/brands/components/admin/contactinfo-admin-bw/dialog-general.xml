@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    anchor="100%"
+    title="General"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <contactUsLabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Contact Us Label"
+            fieldDescription="The copy for 'Contact Us'"
+            name="./contactUsLabel_t"
+            xtype="textfield"/>
+    	<contactus-path
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Contact Us path"
+	        name="./contactUsPath"
+	        xtype="pathfield"/>
+    	<sendMessageLabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Send Message Label"
+            fieldDescription="The label for 'send message' cta"
+            name="./sendMessageLabel_t"
+            xtype="textfield"/>
+        <sendMessagePath
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Send Message Path"
+            fieldDescription="The path for 'send message' cta"
+            name="./sendMessagePath"
+            xtype="pathfield"/>
+        <officeAddressLabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Office Address Label"
+            fieldDescription="The label for Office Address"
+            name="./officeAddressLabel_t"
+            xtype="textfield"/>
+    	<officeAddress
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Office Address"
+            fieldDescription="The copy to show for Office Address. Use a HTML br tag to render a line break."
+            name="./officeAddress"
+            xtype="textarea"/>
+    	<joinBrandsLabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Join Brands Label"
+            fieldDescription="The label for 'Join Brands' button"
+            name="./joinBrandsLabel_t"
+            xtype="textarea"/>
+    	<joinBrandsPath
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Join Brands Path"
+            fieldDescription="The path for 'Join Brands' button"
+            name="./joinBrandsPath"
+            xtype="pathfield"/>
+    	<shopOnlineLabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Shop Online Label"
+            fieldDescription="The label for 'Shop Online' button"
+            name="./shopOnlineLabel_t"
+            xtype="textfield"/>
+    	<shopOnlinePath
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Shop Online Path"
+            fieldDescription="The path for 'Shop Online' button"
+            name="./shopOnlinePath"
+            xtype="pathfield"/>
+    	<storeFinderLabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Store Finder Label"
+            fieldDescription="The path for 'Store Finder' CTA"
+            name="./storeFinderLabel_t"
+            xtype="textfield"/>
+    	<storeFinderPath
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Store Finder Path"
+            fieldDescription="The path for 'Store Finder' CTA"
+            name="./storeFinderPath"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

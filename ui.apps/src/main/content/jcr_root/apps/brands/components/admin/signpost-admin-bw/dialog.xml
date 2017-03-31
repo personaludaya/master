@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <admin
+                jcr:primaryType="cq:Panel"
+                title="Admin">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <signpost-title_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The signpost title."
+                        fieldLabel="Signpost Title"
+                        name="./signpost-title_t"
+                        xtype="textfield"/>
+                    <signpost-copy_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The signpost copy."
+                        fieldLabel="Signpost Copy"
+                        name="./signpost-copy_t"
+                        xtype="textarea"/>
+                    <signpost-icon
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The signpost SVG icon."
+                        fieldLabel="Signpost Icon."
+                        name="./signpost-icon"
+                        optionsProvider="CQ.utils.Css.getIconList"
+                        type="select"
+                        xtype="selection"/>
+                    <signpost-icon-style
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The signpost SVG icon style."
+                        fieldLabel="Signpost Icon Style"
+                        name="./signpost-icon-style"
+                        optionsProvider="CQ.utils.Css.getIconStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <signpost-img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The signpost image."
+                        fieldLabel="Signpost Image Path"
+                        name="./signpost-img-path"
+                        xtype="pathfield"/>
+                    <signpost-img-alt_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The signpost image alternate text. If this is blank, will use “Signpost Title”."
+                        fieldLabel="Signpost Image Alt Text"
+                        name="./signpost-img-alt_t"
+                        xtype="textfield"/>
+                    <signpost-btn-text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The signpost button text."
+                        fieldLabel="Signpost Button Text"
+                        name="./signpost-btn-text"
+                        optionsProvider="CQ.utils.Css.getCtaTextList"
+                        type="select"
+                        xtype="selection"/>
+                    <signpost-btn-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The signpost button path."
+                        fieldLabel="Signpost Button Path"
+                        name="./signpost-btn-path"
+                        xtype="pathfield"/>
+                    <signpost-btn-open-new-win
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check if the button URL is to be opened in new window."
+                        fieldLabel="Signpost Button Open New Window"
+                        name="./signpost-btn-open-new-win"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <cta-config
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+                        xtype="cqinclude"/>
+                </items>
+            </admin>
+        </items>
+    </items>
+</jcr:root>

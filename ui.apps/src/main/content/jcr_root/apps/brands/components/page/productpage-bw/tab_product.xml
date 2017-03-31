@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Product">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <details
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Details"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <prdt-category
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="The product category."
+                    fieldLabel="Product Category"
+                    name="./prdt-category"
+                    namespaces="[brands]"
+                    xtype="tags"/>
+                <prdt-life-stage
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="The product life stage."
+                    fieldLabel="Product Life Stage"
+                    name="./prdt-life-stage"
+                    namespaces="[brands]"
+                    xtype="tags"/>
+                <prdt-img-path
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="The product image path."
+                    fieldLabel="Product Image Path"
+                    name="./prdt-img-path"
+                    xtype="pathfield"/>
+                <prdt-img-alt_t
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The product image alternate text. If this is blank, will use “Title”."
+                    fieldLabel="Product Image Alt Text"
+                    name="./prdt-img-alt_t"
+                    xtype="textfield"/>
+                <prdt-bottle-img-path
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="The product bottle image path."
+                    fieldLabel="Product Bottle Image Path"
+                    name="./prdt-bottle-img-path"
+                    xtype="pathfield"/>
+                <prdt-bottle-img-alt_t
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The product bottle image alternate text. If this is blank, will use “Title”."
+                    fieldLabel="Product Bottle Image Alt Text"
+                    name="./prdt-bottle-img-alt_t"
+                    xtype="textfield"/>
+                <prdt-droplet-img-path
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product droplet image path."
+                    fieldLabel="Product Droplet Image Path"
+                    name="./prdt-droplet-img-path"
+                    xtype="pathfield"/>
+                <prdt-img-style-hmpg
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Product Image Style (Homepage)"
+                    name="./prdt-img-style-hmpg"
+                    optionsProvider="CQ.utils.Css.getPrdtImageStyleList"
+                    type="select"
+                    xtype="selection"/>
+                <prdt-img-path_hmpg
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product image path used for Homepage"
+                    fieldLabel="Product Image Path (Homepage)"
+                    name="./prdt-img-path_hmpg"
+                    xtype="pathfield"/>
+                <prdt-pkg-img-path
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldDescription="The product package image path used for Product Comparison page."
+                    fieldLabel="Product Package Image Path (Product Compare)"
+                    name="./prdt-pkg-img-path"
+                    xtype="pathfield"/>
+                <prdt-pkg-img-alt_t
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}true"
+                    fieldDescription="The product package image alternate text used in Product Comparison page. If this is blank, will use 'Title'."
+                    fieldLabel="Product Package Image Alt Text (Product Compare)"
+                    name="./prdt-pkg-img-alt_t"
+                    xtype="textfield"/>
+                <ingredient-text-config
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Ingredients"
+                    name="./ingredient-text-config"
+                    xtype="multicompositefield">
+                    <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                        <ingredient-disclaimer
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Please only enter either the Ingredient Path OR the Ingredient Text. If both are entered, Ingredient Path will be used."
+                            fieldLabel="Note"
+                            xtype="displayfield"/>
+                        <ingredient-page-path
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Select the Ingredient Page Path and the Page Name will be used in Ingredients column."
+                            fieldLabel="Ingredient Path"
+                            name="ingredient-page-path"
+                            xtype="pathfield"/>
+                        <ingredient-text_t
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Enter the Ingredient if no Page has been created for it."
+                            fieldLabel="Ingredient Text"
+                            name="ingredient-text_t"
+                            xtype="textfield"/>
+                        <ingredient-volume_t
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="This is the text, which will be displayed next to the Ingredient, indicating the Ingredient's amount used in the Product. (e.g. 5mg)"
+                            fieldLabel="Ingredient Volume"
+                            name="ingredient-volume_t"
+                            xtype="textfield"/>
+                    </fieldConfigs>
+                </ingredient-text-config>
+                <nutritional-info
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product nutritional information."
+                    fieldLabel="Nutritional Information"
+                    name="./nutritional-info"
+                    namespaces="[brands]"
+                    xtype="tags"/>
+                <prdt-price-currency
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Price Currency"
+                    name="./prdt-price-currency"
+                    optionsProvider="CQ.utils.Css.getPrdtPriceCurrencyList"
+                    type="select"
+                    xtype="selection"/>
+                <hide-prdt-price
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Check if this should be hidden."
+                    fieldLabel="Hide Product Price"
+                    name="./hide-prdt-price"
+                    type="checkbox"
+                    xtype="selection"/>
+                <prdt-ec-cta-text
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product CTA text to ecommerce, i.e. buy now."
+                    fieldLabel="CTA Text to Ecommerce"
+                    name="./prdt-ec-cta-text"
+                    optionsProvider="CQ.utils.Css.getCtaTextList"
+                    type="select"
+                    xtype="selection"/>
+            </items>
+        </details>
+        <ecommerce
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Ecommerce"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <prdt-id
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The ecommerce product id."
+                    fieldLabel="Product ID"
+                    name="./prdt-id"
+                    xtype="textfield"/>
+                <prdt-ec-category-id
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The ecommerce product category id."
+                    fieldLabel="Product Category ID"
+                    name="./prdt-ec-category-id"
+                    xtype="textfield"/>
+                <prdt-ec-url
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The ecommerce product URL."
+                    fieldLabel="Ecommerce URL"
+                    name="./prdt-ec-url"
+                    xtype="pathfield"/>
+                <prdt-retail-price
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The product retail price."
+                    fieldLabel="Retail Price"
+                    name="./prdt-retail-price"
+                    xtype="numberfield"/>
+                <prdt-retail-price-title
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product retail price title."
+                    fieldLabel="Retail Price Title"
+                    name="./prdt-retail-price-title"
+                    optionsProvider="CQ.utils.Css.getPrdtPriceTitleList"
+                    type="select"
+                    xtype="selection"/>
+                <prdt-special-price
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The product special price."
+                    fieldLabel="Special Price"
+                    name="./prdt-special-price"
+                    xtype="numberfield"/>
+                <prdt-special-price-title
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product special price title."
+                    fieldLabel="Special Price Title"
+                    name="./prdt-special-price-title"
+                    optionsProvider="CQ.utils.Css.getPrdtPriceTitleList"
+                    type="select"
+                    xtype="selection"/>
+            </items>
+        </ecommerce>
+    </items>
+</jcr:root>

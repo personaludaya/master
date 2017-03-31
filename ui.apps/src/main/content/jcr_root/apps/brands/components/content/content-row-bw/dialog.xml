@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="Content Row">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <content-row
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content row."
+                        fieldLabel="Content Row"
+                        name="./content-row"
+                        xtype="multicompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <img-path
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The image path."
+                                fieldLabel="Image path"
+                                name="img-path"
+                                xtype="pathfield"/>
+                            <img-alt_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The image alternate text."
+                                fieldLabel="Image Alt Text"
+                                name="img-alt_t"
+                                xtype="textfield"/>
+                            <title_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The title."
+                                fieldLabel="Title"
+                                name="title_t"
+                                xtype="textarea"/>
+                            <cta-path
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The CTA path."
+                                fieldLabel="CTA Path"
+                                name="cta-path"
+                                xtype="pathfield"/>
+                            <cta-text
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="CTA Text"
+                                name="cta-text"
+                                optionsProvider="CQ.utils.Css.getCtaTextList"
+                                type="select"
+                                xtype="selection"/>
+                            <cta-type
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                defaultValue="None"
+                                fieldLabel="CTA Type"
+                                name="cta-type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value="none"/>
+                                    <button
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Button"
+                                        value="button"/>
+                                    <link
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Link"
+                                        value="link"/>
+                                </options>
+                            </cta-type>
+                            <cta-style
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="CTA Style"
+                                name="cta-style"
+                                optionsProvider="CQ.utils.Css.getCtaStyleList"
+                                type="select"
+                                xtype="selection"/>
+                            <cta-icon
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="CTA Icon"
+                                name="cta-icon"
+                                optionsProvider="CQ.utils.Css.getIconList"
+                                type="select"
+                                xtype="selection"/>
+                            <cta-icon-style
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="CTA Icon Style"
+                                name="cta-icon-style"
+                                optionsProvider="CQ.utils.Css.getIconStyleList"
+                                type="select"
+                                xtype="selection"/>
+                            <cta-open-new-win
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Check if the CTA is to be opened in new window."
+                                fieldLabel="CTA Open New Window"
+                                name="cta-open-new-win"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </fieldConfigs>
+                    </content-row>
+                </items>
+            </content>
+        </items>
+    </items>
+</jcr:root>

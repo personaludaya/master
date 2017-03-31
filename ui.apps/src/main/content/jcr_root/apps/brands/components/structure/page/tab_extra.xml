@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Extra">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <extra
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <hide-breadcrumbs
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Hide Breadcrumbs"
+                    name="./hide-breadcrumbs"
+                    type="checkbox"
+                    xtype="selection"/>
+                <hide-page-in-breadcrumbs
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Hide Page in Breadcrumbs"
+                    inputValue="true"
+                    name="./hide-page-in-breadcrumbs"
+                    type="checkbox"
+                    xtype="selection"/>
+                <hideinnav
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Hide in Navigation"
+                    inputValue="true"
+                    name="./hideInNav"
+                    type="checkbox"
+                    xtype="selection"/>
+                <hide-socialshare-bar
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Hide Social Share Bar"
+                    name="./hide-socialshare-bar"
+                    type="checkbox"
+                    xtype="selection"/>
+                <addthis-widget-pubid
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Addthis Widget PubId"
+                    name="./addthis-widget-pubid"
+                    xtype="textfield"/>
+            </items>
+        </extra>
+        <sitemap-listing
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Sitemap Listing Component Settings For Page"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <sitemap-listing-disclaimer
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The settings here are for AEM Sitemap Listing component, and does not affect sitemap.xml generated."
+                    fieldLabel="Note"
+                    xtype="displayfield"/>
+                <hide-in-sitemap-component
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Check this to hide current page in Sitemap Listng. This will not exclude the sub-pages created."
+                    fieldLabel="Hide Page in Sitemap Listing Component"
+                    name="./hide-in-sitemap-component"
+                    type="checkbox"
+                    xtype="selection"/>
+                <hide-subpage-in-sitemap-component
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Check this to hide sub-pages in Sitemap Listng. This will not exclude the current page."
+                    fieldLabel="Hide All Sub Pages in Sitemap Listing Component"
+                    name="./hide-subpage-in-sitemap-component"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </sitemap-listing>
+        <sitemap
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Sitemap"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <change-frequency
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Change Frequency"
+                    name="./change-frequency"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <daily
+                            jcr:primaryType="nt:unstructured"
+                            text="Daily"
+                            value="daily"/>
+                        <weekly
+                            jcr:primaryType="nt:unstructured"
+                            text="Weekly"
+                            value="weekly"/>
+                        <monthly
+                            jcr:primaryType="nt:unstructured"
+                            text="Monthly"
+                            value="monthly"/>
+                    </options>
+                </change-frequency>
+                <priority
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Priority"
+                    name="./priority"
+                    xtype="numberfield"/>
+            </items>
+        </sitemap>
+    </items>
+</jcr:root>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="Manufacturing Process">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <content-type
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The content type to determine whether is carousel or listing."
+                        fieldLabel="Content Type"
+                        name="./content-type"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <carousel
+                                jcr:primaryType="nt:unstructured"
+                                text="Carousel"
+                                value="carousel"/>
+                            <ingredients
+                                jcr:primaryType="nt:unstructured"
+                                text="Listing"
+                                value="listing"/>
+                        </options>
+                    </content-type>
+                    <manufacturing-process-path
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The elements, which are the paths to the manufacturing process."
+                        fieldLabel="Manufacturing Process List"
+                        name="./manufacturing-process-path"
+                        xtype="pathfield"/>
+                </items>
+            </content>
+        </items>
+    </items>
+</jcr:root>

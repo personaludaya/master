@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="Text">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <content_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The content copy."
+                        fieldLabel="Content Copy"
+                        name="./content_t"
+                        xtype="textarea"/>
+                    <content-style
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="none"
+                        fieldLabel="Content Style"
+                        name="./content-style"
+                        optionsProvider="CQ.utils.Css.getCtaStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <content-type
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="none"
+                        fieldLabel="Content Type"
+                        name="./content-type"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text=""
+                                value="none"/>
+                            <quote
+                                jcr:primaryType="nt:unstructured"
+                                text="quote"
+                                value="quote"/>
+                            <summary
+                                jcr:primaryType="nt:unstructured"
+                                text="summary"
+                                value="summary"/>
+                        </options>
+                    </content-type>
+                    <content-bullets_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content bullets."
+                        fieldLabel="Content Bullets"
+                        name="./content-bullets_t"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="textfield"/>
+                    </content-bullets_t>
+                    <img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The image path."
+                        fieldLabel="Image Path"
+                        name="./img-path"
+                        xtype="pathfield"/>
+                    <img-alt_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The image alternate text."
+                        fieldLabel="Image Alt Text"
+                        name="./img-alt_t"
+                        xtype="textfield"/>
+                    <cta-config
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+                        xtype="cqinclude"/>
+                </items>
+            </content>
+        </items>
+    </items>
+</jcr:root>

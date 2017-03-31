@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    anchor="100%"
+    title="General"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <ctaText
+            jcr:primaryType="cq:Widget"
+            fieldDescription="If this is not filled, page title will be used instead for self link navigation option."
+            fieldLabel="CTA Text"
+            name="./cta-text_t"
+            xtype="textfield"/>
+        <ctaPath
+            jcr:primaryType="cq:Widget"
+            fieldDescription="The CTA path."
+            fieldLabel="CTA Path"
+            name="./cta-path"
+            xtype="pathfield"/>
+        <navigationType
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Navigation Type"
+            name="./navigation-type"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <typeSelfLink
+                    jcr:primaryType="nt:unstructured"
+                    text="Self Link"
+                    value="self-link"/>
+                <typeDisplayPanel
+                    jcr:primaryType="nt:unstructured"
+                    text="Display Submenu Panel"
+                    value="display-panel"/>
+            </options>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function( field ){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var d = field.findParentByType('tabpanel'); &#xa;&#x9;&#x9;d.hideTabStripItem('selflink');&#xa;&#x9;&#x9;d.hideTabStripItem('displaypanel');&#xa;&#x9;&#x9;if (field.value == 'self-link') { d.unhideTabStripItem('selflink'); }&#xa;&#x9;&#x9;if (field.value == 'display-panel') { d.unhideTabStripItem('displaypanel'); }&#xa;&#x9;} &#xa;}"
+                selectionchanged="function( field,value){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var d = field.findParentByType('tabpanel'); &#xa;&#x9;&#x9;if (value == 'self-link') { d.hideTabStripItem('displaypanel'); d.unhideTabStripItem('selflink'); }&#xa;&#x9;&#x9;if (value == 'display-panel') { d.hideTabStripItem('selflink'); d.unhideTabStripItem('displaypanel'); }&#xa;&#x9;} &#xa;}"/>
+        </navigationType>
+    </items>
+</jcr:root>

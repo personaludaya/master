@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <admin
+                jcr:primaryType="cq:Panel"
+                title="Admin">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <instagram-img
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The Instagram image."
+                        fieldLabel="Instagram Image"
+                        name="./instagram-img"
+                        xtype="pathfield"/>
+                    <instagram-url
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The Instagram URL."
+                        fieldLabel="Instagram URL"
+                        name="./instagram-url"
+                        xtype="pathfield"/>
+                </items>
+            </admin>
+        </items>
+    </items>
+</jcr:root>

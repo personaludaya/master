@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <sitemap-section-config
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sitemap Section Configuration"
+                        name="./sitemap-section-config"
+                        xtype="multicompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <sitemap-section-rootpath
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldDescription="The parent path of the Sitemap section. All activated child pages created under the selected path will be displayed in the sitemap listing."
+                                fieldLabel="Section Parent Path"
+                                name="sitemap-section-rootpath"
+                                xtype="pathfield"/>
+                            <sitemap-template-type
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldDescription="Select to display page links in categories (if any) used by descendant page."
+                                fieldLabel="Possible Category Type"
+                                name="sitemap-template-type"
+                                type="select"
+                                value="none"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="No Need To Be Categorized / General Content"
+                                        value="none"/>
+                                    <product
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Product"
+                                        value="product"/>
+                                </options>
+                            </sitemap-template-type>
+                            <sitemap-section-header_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Enter a value here if a different Header than Parent's 'Title' needs to be displayed for this Section."
+                                fieldLabel="Section Header Text"
+                                name="sitemap-section-header_t"
+                                xtype="textfield"/>
+                            <listing-order-disclaimer
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Listing will sort accordingly to the order selected first and then followed by alphabetical order (if selected in Display Configuration tab) for each kind of descendant page found."
+                                fieldLabel="Note"
+                                xtype="displayfield"/>
+                            <sitemap-children-order
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This value will determine the order of the immediate children found (if any) within this Section. e.g. Our Products (Parent) > Fulfil Your Potential (Child)"
+                                fieldLabel="Immediate Children Order"
+                                name="sitemap-children-order"
+                                type="select"
+                                value="2"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <third
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Third"
+                                        value="3"/>
+                                    <second
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Second"
+                                        value="2"/>
+                                    <first
+                                        jcr:primaryType="nt:unstructured"
+                                        text="First"
+                                        value="1"/>
+                                </options>
+                            </sitemap-children-order>
+                            <sitemap-grandchildren-order
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This value will determine the order of the child pages with its own children found (if any) within this Section. e.g. Our Proudcts (Parent) > Ingredients (Child) > Berries (Grandchild)"
+                                fieldLabel="Grandchildren Order"
+                                name="sitemap-grandchildren-order"
+                                type="select"
+                                value="3"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <third
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Third"
+                                        value="3"/>
+                                    <second
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Second"
+                                        value="2"/>
+                                    <first
+                                        jcr:primaryType="nt:unstructured"
+                                        text="First"
+                                        value="1"/>
+                                </options>
+                            </sitemap-grandchildren-order>
+                            <sitemap-categorized-order
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="This value will determine the order of categorized pages (if any) within this Section. e.g. Our Products (Parent) > ActivMove (Product Categorized Child)"
+                                fieldLabel="Categorized Pages Order"
+                                name="sitemap-categorized-order"
+                                type="select"
+                                value="1"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <third
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Third"
+                                        value="3"/>
+                                    <second
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Second"
+                                        value="2"/>
+                                    <first
+                                        jcr:primaryType="nt:unstructured"
+                                        text="First"
+                                        value="1"/>
+                                </options>
+                            </sitemap-categorized-order>
+                        </fieldConfigs>
+                    </sitemap-section-config>
+                </items>
+            </general>
+            <others
+                jcr:primaryType="cq:Panel"
+                title="Display Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <sitemap-open-new-window
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check this option to open all links in a new window."
+                        fieldLabel="Open In New Window? (Apply to all)"
+                        name="./sitemap-open-new-window"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <sitemap-sort-alpha
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check this option to sort each type of descendant (Immediate Children, Grandchildren, Categorized Page) in alphabetical order. Listing will sort by order in General Tab first and then followed by alphabetical order for each kind of descendant page found."
+                        fieldLabel="Sort In Alphabetical Order? (Apply to all)"
+                        name="./sitemap-sort-alpha"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <sitemap-list-item-icon
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="icon-chevron-right-primary"
+                        fieldLabel="List Item Icon"
+                        name="./sitemap-list-item-icon"
+                        optionsProvider="CQ.utils.Css.getIconList"
+                        type="select"
+                        xtype="selection"/>
+                    <sitemap-list-item-icon-style
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="link-icon-small"
+                        fieldLabel="List Item Icon Style"
+                        name="./sitemap-list-item-icon-style"
+                        optionsProvider="CQ.utils.Css.getIconStyleList"
+                        type="select"
+                        xtype="selection"/>
+                </items>
+            </others>
+        </items>
+    </items>
+</jcr:root>

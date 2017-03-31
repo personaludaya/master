@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <bm-canvas-general
+                jcr:primaryType="cq:Panel"
+                title="Canvas General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bm-canvas-header-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Canvas Header Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-canvas-header-text_t
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                fieldLabel="Canvas Header"
+                                name="./bm-canvas-header-text_t"
+                                xtype="textfield"/>
+                            <bm-canvas-header-size
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="h1"
+                                fieldLabel="Canvas Header Size"
+                                name="./bm-canvas-header-size"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h4"
+                                        value="h4"/>
+                                    <h5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h5"
+                                        value="h5"/>
+                                </options>
+                            </bm-canvas-header-size>
+                            <bm-canvas-header-align
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="text-left"
+                                fieldLabel="Canvas Header Alignment"
+                                name="./bm-canvas-header-align"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="text-left"/>
+                                    <center
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Center"
+                                        value="text-center"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right"
+                                        value="text-right"/>
+                                </options>
+                            </bm-canvas-header-align>
+                            <bm-canvas-header-style
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="secondary-color"
+                                fieldLabel="Canvas Header Style"
+                                name="./bm-canvas-header-style"
+                                optionsProvider="CQ.utils.Css.getHeaderStyleList"
+                                type="select"
+                                xtype="selection"/>
+                        </items>
+                    </bm-canvas-header-config>
+                    <bm-canvas-subheader-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Canvas Sub Header Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-canvas-subhead-text_t
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}true"
+                                fieldLabel="Canvas Sub Header"
+                                name="./bm-canvas-subhead-text_t"
+                                xtype="textfield"/>
+                        </items>
+                    </bm-canvas-subheader-config>
+                    <bm-canvas-descr-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Canvas Description Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-canvas-descr_t
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}true"
+                                fieldLabel="Canvas Description"
+                                name="./bm-canvas-descr_t"
+                                xtype="textarea"/>
+                        </items>
+                    </bm-canvas-descr-config>
+                    <bm-canvas-cta-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Canvas CTA Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <cta-config
+                                jcr:primaryType="cq:Widget"
+                                path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+                                xtype="cqinclude"/>
+                        </items>
+                    </bm-canvas-cta-config>
+                </items>
+            </bm-canvas-general>
+            <bm-signposts-config
+                jcr:primaryType="cq:Panel"
+                title="Canvas Signposts Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bm-signposts-path-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Signposts Path Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-canvas-signposts-path
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Add a maximum of 3 Be Magazine Page paths to include in this listing."
+                                fieldLabel="Be Magazine Page Path(s)"
+                                name="./bm-canvas-signposts-path"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="cq:Widget"
+                                    limit="3"
+                                    xtype="pathfield"/>
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    beforeadd="function(list, component, index) { var length = list.items.length; var addButton = list.items.items[length - 1]; if (length == list.fieldConfig.limit) {addButton.hide();} }"
+                                    removeditem="function(list) { var length = list.items.length; if (length &lt;= list.fieldConfig.limit) { list.items.items[length - 1].show();} }"/>
+                            </bm-canvas-signposts-path>
+                        </items>
+                    </bm-signposts-path-config>
+                    <bm-signposts-display-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Signposts Display Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-signposts-show-cat
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="{Boolean}false"
+                                fieldDescription="Check this to display Be Magazine Category retrieved from the first value of Tags/Keywords."
+                                fieldLabel="Display Category"
+                                name="./bm-signposts-show-cat"
+                                type="checkbox"
+                                xtype="selection"/>
+                            <bm-signposts-title-size
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="h4"
+                                fieldLabel="Signposts Title Size"
+                                name="./bm-signposts-title-size"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h4"
+                                        value="h4"/>
+                                    <h5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h5"
+                                        value="h5"/>
+                                </options>
+                            </bm-signposts-title-size>
+                            <bm-signposts-alignment
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="text-left"
+                                fieldLabel="Signposts Content Alignment"
+                                name="./bm-signposts-alignment"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="text-left"/>
+                                    <center
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Center"
+                                        value="text-center"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right"
+                                        value="text-right"/>
+                                </options>
+                            </bm-signposts-alignment>
+                            <bm-signposts-style
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="secondary-color"
+                                fieldLabel="Signposts Content Style"
+                                name="./bm-signposts-style"
+                                optionsProvider="CQ.utils.Css.getHeaderStyleList"
+                                type="select"
+                                xtype="selection"/>
+                        </items>
+                    </bm-signposts-display-config>
+                </items>
+            </bm-signposts-config>
+        </items>
+    </items>
+</jcr:root>

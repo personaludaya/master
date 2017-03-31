@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+	                  <path-to-product
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The path to the Product pages."
+                        fieldLabel="Path to Product pages"
+                        name="./path-to-product"
+                        xtype="pathfield"/>
+                      <default-img-path
+                    	jcr:primaryType="cq:Widget"
+                    	fieldDescription="This property is used to set the default image placeholder when image is not found."
+                    	fieldLabel="Default Image Path"
+                    	name="./default-img-path"
+                    	xtype="pathfield"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

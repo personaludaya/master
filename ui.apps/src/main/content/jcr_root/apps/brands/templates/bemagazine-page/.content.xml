@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Be Magazine Page Template"
+    jcr:primaryType="cq:Template"
+    jcr:title="Be Magazine Page Template"
+    allowedPaths="[/content/brands(/.*)?]"
+    ranking="{Long}1"
+    shortTitle="Be Magazine Page">
+    <jcr:content
+        cq:designPath="/etc/designs/brands"
+        jcr:primaryType="cq:PageContent"
+        sling:redirectStatus="{Long}301"
+        sling:resourceType="brands/components/page/bemagazinepage-bw"/>
+</jcr:root>

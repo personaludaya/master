@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="ChatBot Config">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<init-chat-msg
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            fieldDescription="Page with a 'Chatbot Search Results' component for showing all chatbot search results"
+            fieldLabel="Chatbot Search Page"
+            name="./cb-searchpage-path"
+            xtype="pathfield"/>
+        <faq-src-path
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            fieldDescription=""
+            fieldLabel="FAQ Source Path"
+            name="./cbfaq-src-path"
+            xtype="pathfield"/>
+        <chatbotConfig
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="ChatBot Visibility"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <chatbot-visibility
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    defaultValue="20"
+                    fieldDescription="The percentage, to display ChatBot, in reference to number of Homepage visits. e.g. 10, 30, 60. Note: ChatBot will always show in author mode."
+                    fieldLabel="Visibilty (%)"
+                    name="./chatbot-visibility"
+                    xtype="numberfield"/>
+            	<init-chat-msg
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="Message to show on initial visit (e.g. Hello there)"
+                    fieldLabel="Initial Visit Message"
+                    name="./init-chatbot-msg_t"
+                    xtype="textarea"/>
+            	<sub-chat-msg
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="Message to show on subsequent visits (e.g. Welcome back)"
+                    fieldLabel="Subsequent Visit Message"
+                    name="./sub-chatbot-msg_t"
+                    xtype="textarea"/>
+            </items>
+        </chatbotConfig>
+    </items>
+</jcr:root>

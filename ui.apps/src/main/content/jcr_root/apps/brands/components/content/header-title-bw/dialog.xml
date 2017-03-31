@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="Header Title">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <header-title_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Header Title"
+                        name="./header-title_t"
+                        xtype="textfield"/>
+                    <header-size
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        defaultValue="h1"
+                        fieldLabel="Header Size"
+                        name="./header-size"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="h1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="h2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="h3"
+                                value="h3"/>
+                            <h4
+                                jcr:primaryType="nt:unstructured"
+                                text="h4"
+                                value="h4"/>
+                            <h5
+                                jcr:primaryType="nt:unstructured"
+                                text="h5"
+                                value="h5"/>
+                        </options>
+                    </header-size>
+                    <header-alignment
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Alignment"
+                        name="./header-alignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                        	<none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value=""/>
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="text-left"/>
+                            <center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="text-center"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="text-right"/>
+                        </options>
+                    </header-alignment>
+                    <header-style
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Header Style"
+                        name="./header-style"
+                        optionsProvider="CQ.utils.Css.getHeaderStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <cta-config
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+                        xtype="cqinclude"/>
+                </items>
+            </content>
+        </items>
+    </items>
+</jcr:root>

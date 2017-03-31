@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="Box Style Listing">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <opt
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The listing option."
+                        fieldLabel="Option"
+                        name="./opt"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <store-locations
+                                jcr:primaryType="nt:unstructured"
+                                text="Store Locations"
+                                value="store-locations"/>
+                            <ingredients
+                                jcr:primaryType="nt:unstructured"
+                                text="Ingredients"
+                                value="ingredients"/>
+                        </options>
+                    </opt>
+                    <listing-path
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The path to the children pages."
+                        fieldLabel="Path to child pages"
+                        name="./listing-path"
+                        xtype="pathfield"/>
+                </items>
+            </content>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <contentpage-signposts
+                jcr:primaryType="cq:Panel"
+                title="Content Page Signposts">
+                <items jcr:primaryType="cq:WidgetCollection">
+                     <contentpage-signpost-paths
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content page signpost paths."
+                        fieldLabel="Content Page Signpost Paths"
+                        name="./contentpage-signpost-paths"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="pathfield"/>
+                     </contentpage-signpost-paths>
+                     <no-of-cols
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The number of columns per row."
+                        fieldLabel="Number of Columns"
+                        name="./no-of-cols"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <cols3
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="cols3"/>
+                            <cols4
+                                jcr:primaryType="nt:unstructured"
+                                text="4"
+                                value="cols4"/>
+                        </options>
+                     </no-of-cols>
+                </items>
+            </contentpage-signposts>
+            <content-signpost
+                jcr:primaryType="cq:Panel"
+                title="Content Signpost">
+                <items jcr:primaryType="cq:WidgetCollection">
+                     <content-signpost-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content signpost admin path."
+                        fieldLabel="Content Signpost Admin Path"
+                        name="./content-signpost-path"
+                        xtype="pathfield" />
+                </items>
+            </content-signpost>
+        </items>
+    </items>
+</jcr:root>

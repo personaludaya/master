@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <timing
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The number of seconds before each element changes. The default value is 5."
+                        defaultValue = "5"
+                        fieldLabel="Timing"
+                        name="./timing"
+                        xtype="numberfield"/>
+                     <path-to-instagram
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The path to the Instagram pages."
+                        fieldLabel="Path to Instagram pages"
+                        name="./path-to-instagram"
+                        xtype="pathfield"/>
+                    <hashtag
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The Instagram hashtag."
+                        fieldLabel="Hashtag"
+                        name="./hashtag"
+                        xtype="textfield"/>
+                    <hashtag-copy_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The Instagram hashtag content copy."
+                        fieldLabel="Hashtag"
+                        name="./hashtag-copy_t"
+                        xtype="textfield"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

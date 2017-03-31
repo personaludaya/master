@@ -1,0 +1,26 @@
+[{
+    "value": "background-cover-image",
+    "text": "background-cover-image"
+  },{
+    "value": "background-cover-image-fixed",
+    "text": "background-cover-image-fixed"
+  },{
+    "value": "background-contain-image",
+    "text": "background-contain-image"
+  },{
+    "value": "background-cover-image-center-bottom",
+    "text": "background-cover-image-center-bottom"
+  },{
+    "value": "background-contain-image-normal-xs",
+    "text": "background-contain-image-normal-xs"
+  },{
+    "value": "background-contain-image-normal-xs skrollable skrollable-before",
+    "text": "background-contain-image-normal-xs skrollable skrollable-before"
+  },{
+    "value": "background-cover-image skrollable skrollable-between",
+    "text": "background-cover-image skrollable skrollable-between"
+  },{
+    "value": "background-cover-image-center-bottom skrollable skrollable-between",
+    "text": "background-cover-image-center-bottom skrollable skrollable-between"
+  }
+]

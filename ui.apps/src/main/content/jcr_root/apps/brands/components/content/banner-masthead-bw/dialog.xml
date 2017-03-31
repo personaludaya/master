@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <banner-title_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Banner Title"
+                        fieldDescription="The banner title."
+                        name="./banner-title_t"
+                        xtype="textfield"/>
+                    <banner-copy_t
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Banner Copy"
+                        fieldDescription="The banner content copy"
+                        name="./banner-copy_t"
+                        xtype="textfield"/>
+                    <banner-img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The banner image path."
+                        fieldLabel="Banner Image Path"
+                        name="./banner-img-path"
+                        xtype="pathfield"/>
+                    <banner-img-alt_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The banner image alternate text."
+                        fieldLabel="Banner Image Alt Text"
+                        name="./banner-img-alt_t"
+                        xtype="textfield"/>
+                </items>
+            </content>
+            <cta
+                jcr:primaryType="cq:Panel"
+                title="CTA">
+              <items jcr:primaryType="cq:WidgetCollection">  
+	             <cta-config
+	                        jcr:primaryType="cq:Widget"
+	                        path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+	                        xtype="cqinclude"/>
+                </items>
+            </cta>
+        </items>
+    </items>
+</jcr:root>

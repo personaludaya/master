@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="General">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <page
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Page"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <img-path
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Page Image Path"
+                    name="./img-path"
+                    xtype="pathfield"/>
+                <img-alt_t
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Page Image Alt Text"
+                    name="./img-alt_t"
+                    xtype="textfield"/>
+                <page-bkgrd-img-path
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Page Background Image"
+                    name="./page-bkgrd-img-path"
+                    xtype="pathfield"/>
+                <page-bkgrd-style
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Page Background Style"
+                    name="./page-bkgrd-style"
+                    optionsProvider="CQ.utils.Css.getPageBackgroundStyleList"
+                    type="select"
+                    xtype="selection"/>
+                <dataspeedsection
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    title="Data Speed "
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <parallax
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Disabled parallax"
+                            inputValue="true"
+                            name="./disabledparallax"
+                            type="checkbox"
+                            xtype="selection">
+                            <listeners
+                                jcr:primaryType="nt:unstructured"
+                                selectionchanged="function(comp, val, isChecked) {&#xa;    var dlg = comp.findParentByType(&quot;dialog&quot;); //find the dialog&#xa;    var dataSpeed = dlg.getField(&quot;./data-speed&quot;); //get the field to disable&#xa;&#xa;    /*hide or show component based on checked value */&#xa;    isChecked ? dataSpeed.disable() : dataSpeed.enable(); &#xa;}"/>
+                        </parallax>
+                        <data-speed
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="normal"
+                            fieldDescription="Default data speed is normal"
+                            fieldLabel="Data Speed"
+                            name="./data-speed"
+                            optionsProvider="CQ.utils.Css.getDataSpeedList"
+                            type="combobox"
+                            xtype="selection"/>
+                    </items>
+                </dataspeedsection>
+            </items>
+        </page>
+        <chat-bot
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Chat Bot"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <chatbot-tags
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-tags"
+                    fieldLabel="Chat Bot Tags"
+                    name="./chatbot-tags"
+                    namespaces="[brands]"
+                    xtype="tags"/>
+            </items>
+        </chat-bot>
+    </items>
+</jcr:root>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                      <prdt-life-stage-tags
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    cls="cq-propsdialog-tags"
+	                    fieldLabel="Product Life Stage Tags"
+	                    fieldDescription="The product life stage tags."
+	                    name="./prdt-life-stage-tags"
+	                    namespaces="[brands]"
+	                    xtype="tags"/>
+	                  <path-to-product
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The path to the Product pages."
+                        fieldLabel="Path to Product pages"
+                        name="./path-to-product"
+                        xtype="pathfield"/>
+	                  <content-singposts-position
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content signposts position."
+                        fieldLabel="Columns"
+                        name="./content-singposts-position"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <postion-3
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="3"/>
+                            <postion-6
+                                jcr:primaryType="nt:unstructured"
+                                text="6"
+                                value="6"/>
+                            <postion-9
+                                jcr:primaryType="nt:unstructured"
+                                text="9"
+                                value="9"/>
+                        </options>
+                    </content-singposts-position>
+                    <content-signpost-paths
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content signpost paths."
+                        fieldLabel="Content Signpost Paths"
+                        name="./content-signpost-paths"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="pathfield"/>
+                     </content-signpost-paths>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <admin
+                jcr:primaryType="cq:Panel"
+                title="Admin">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <banner-title_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The banner title."
+                        fieldLabel="Banner Title"
+                        name="./banner-title_t"
+                        xtype="textfield"/>
+                    <banner-copy_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The banner copy."
+                        fieldLabel="Banner Copy"
+                        name="./banner-copy_t"
+                        xtype="textarea"/>
+                    <banner-icon
+	                    jcr:primaryType="cq:Widget"
+	                    fieldDescription="The banner SVG icon."
+	                    fieldLabel="Banner Icon."
+	                    name="./banner-icon"
+	                    optionsProvider="CQ.utils.Css.getIconList"
+	                    type="select"
+	                    xtype="selection"/>
+	                <banner-icon-style
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Banner Icon Style"
+                        fieldDescription="The banner SVG icon style."
+                        name="./banner-icon-style"
+                        optionsProvider="CQ.utils.Css.getIconStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <banner-img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The banner image."
+                        fieldLabel="Banner Image Path"
+                        name="./banner-img-path"
+                        xtype="pathfield"/>
+                    <banner-img-alt_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The banner image alternate text. If this is blank, will use “Banner Title”."
+                        fieldLabel="Banner Image Alt Text"
+                        name="./banner-img-alt_t"
+                        xtype="textfield"/>
+                    <banner-img-style
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The banner image style."
+                        fieldLabel="Banner Image Style"
+                        name="./banner-img-style"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <campaign-unlockinggreatness
+                                jcr:primaryType="nt:unstructured"
+                                text="campaign-unlockinggreatness"
+                                value="campaign-unlockinggreatness"/>
+                            <campaign-unlockinggreatness-image-bottom
+                                jcr:primaryType="nt:unstructured"
+                                text="campaign-unlockinggreatness-image-bottom"
+                                value="campaign-unlockinggreatness-image-bottom"/>
+                            <campaign-getset
+                                jcr:primaryType="nt:unstructured"
+                                text="campaign-getset"
+                                value="campaign-getset"/>
+                        </options>
+                    </banner-img-style>
+                    <cta-config
+                        jcr:primaryType="cq:Widget"
+                        path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+                        xtype="cqinclude"/>
+                </items>
+            </admin>
+        </items>
+    </items>
+</jcr:root>

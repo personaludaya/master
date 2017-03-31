@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="zh_tw"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <apply
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="apply"
+        sling:message="apply"/>
+    <bestmatch
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="bestmatch"
+        sling:message="Best Match"/>
+    <boxof6from
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="boxof6from"
+        sling:message="Box of 6 from "/>
+    <buy
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="buy"
+        sling:message="Buy"/>
+    <buynow
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="buynow"
+        sling:message="Buy now"/>
+    <clearall
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="clearall"
+        sling:message="Clear all"/>
+    <compareotherproducts
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="compareotherproducts"
+        sling:message="Compare with other products"/>
+    <contactusmessage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="contactusmessage"
+        sling:message="Would you like to receive information on matketing activities from Cerebos Pacific Limited (“Cerebos”)?"/>
+    <copyright
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="copyright"
+        sling:message="© Copyright ##year## Cerebos Pacific Limited"/>
+    <deliveryfaq
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="deliveryfaq"
+        sling:message="Delivery FAQ"/>
+    <editprdtselection
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="editprdtselection"
+        sling:message="Edit product selection"/>
+    <explorenow
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="explorenow"
+        sling:message="Explore now"/>
+    <findoutmore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="findoutmore"
+        sling:message="Find out more"/>
+    <home
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="home"
+        sling:message="Home"/>
+    <hideall
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="hideall"
+        sling:message="Hide all"/>
+    <loadmore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="loadmore"
+        sling:message="Load more"/>
+    <next
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="next"
+        sling:message="Next"/>
+    <no
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="no"
+        sling:message="No"/>
+    <numberofsearchresults
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="numberofsearchresults"
+        sling:message="##number## results for &quot;##query##&quot;"/>
+    <prev
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="prev"
+        sling:message="Prev"/>
+    <retailprice
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="retailprice"
+        sling:message="Retail Price:"/>
+    <scolldowntoexplore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="scolldowntoexplore"
+        sling:message="Scroll down to explore more"/>
+    <shopnow
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="shopnow"
+        sling:message="Shop now"/>
+    <specialprice
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="specialprice"
+        sling:message="Special Price:"/>
+    <sitename
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sitename"
+        sling:message="BRAND'S"/>
+    <thisbundleconsistsof
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="thisbundleconsistsof"
+        sling:message="This bundle consists of:"/>
+    <thisbundleincludes
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="thisbundleincludes"
+        sling:message="This bundle includes:"/>
+    <thisproductisfor
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="thisproductisfor"
+        sling:message="This product is for:"/>
+    <traceourmilestones
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="traceourmilestones"
+        sling:message="Trace our milestones"/>
+    <viewall
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="viewall"
+        sling:message="View all"/>
+    <viewinonlinestore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="viewinonlinestore"
+        sling:message="View in online store"/>
+    <yes
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="yes"
+        sling:message="Yes"/>
+</jcr:root>

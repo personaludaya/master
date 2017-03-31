@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    anchor="100%"
+    itemId="displaypanel"
+    title="Display Panel"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <maxLink
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            fieldDescription="if not filled, it is defaulted to display 7 links"
+            fieldLabel="Maximum number of links to display"
+            name="./max-link"
+            xtype="numberfield"/>
+        <column1
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Column 1"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <c1Type
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Column 1 Type"
+                    name="./c1-type"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <typeEmpty
+                            jcr:primaryType="nt:unstructured"
+                            text="---Empty---"
+                            value=""/>
+                        <typeChildPages
+                            jcr:primaryType="nt:unstructured"
+                            text="List of Child Pages"
+                            value="child-pages"/>
+                        <typeManualListing
+                            jcr:primaryType="nt:unstructured"
+                            text="Manual Listing"
+                            value="manual-listing"/>
+                        <typeFeatureBanner
+                            jcr:primaryType="nt:unstructured"
+                            text="Feature Banner"
+                            value="feature-banner"/>
+                    </options>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function( field ){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var fieldSets = field.findParentByType('dialogfieldset');&#xa;&#x9;&#x9;var childFieldSets = fieldSets.findByType('dialogfieldset');&#x9;&#xa;&#x9;&#x9;for (var i = 0; i &lt; childFieldSets.length ; i++) {&#xa;&#x9;&#x9;&#x9;var fieldSet = childFieldSets[i];&#xa;&#xa;&#x9;&#x9;&#x9;if (field.value === fieldSet.getItemId()){&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.show();        &#xa;&#x9;&#x9;&#x9;} else {&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.hide();&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}   &#xa;&#x9;} &#xa;}"
+                        selectionchanged="function( field,value ){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var fieldSets = field.findParentByType('dialogfieldset');&#xa;&#x9;&#x9;var childFieldSets = fieldSets.findByType('dialogfieldset');&#x9;&#xa;&#x9;&#x9;for (var i = 0; i &lt; childFieldSets.length ; i++) {&#xa;&#x9;&#x9;&#x9;var fieldSet = childFieldSets[i];&#xa;&#xa;&#x9;&#x9;&#x9;if (value === fieldSet.getItemId()){&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.show();        &#xa;&#x9;&#x9;&#x9;} else {&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.hide();&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}   &#xa;&#x9;} &#xa;}"/>
+                </c1Type>
+                <c1ChildPages
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="child-pages"
+                    title="List of Child Pages"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c1CpHeader
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If this is not filled, page title will be used instead."
+                            fieldLabel="Header Text"
+                            name="./c1-cp-header_t"
+                            xtype="textfield"/>
+                        <c1ParentPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Parent path"
+                            name="./c1-parent-path"
+                            xtype="pathfield"/>
+                    </items>
+                </c1ChildPages>
+                <c1ManualListing
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="manual-listing"
+                    title="Manual Listing"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c1MlHeader
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Header Text"
+                            name="./c1-ml-header_t"
+                            xtype="textfield"/>
+                        <manualListing
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Manual Listing"
+                            name="./c1-manual-listing"
+                            xtype="multicompositefield">
+                            <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                                <cta-path
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="The CTA path."
+                                    fieldLabel="CTA Path"
+                                    name="cta-path"
+                                    xtype="pathfield"/>
+                                <cta-anchor
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="CTA anchor"
+                                    name="cta-anchor"
+                                    xtype="textfield"/>
+                                <cta-text
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="If this is not filled, page title will be used instead."
+                                    fieldLabel="CTA Text"
+                                    name="cta-text_t"
+                                    xtype="textfield"/>
+                                <cta-open-new-win
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Check if the CTA is to be opened in new window."
+                                    fieldLabel="CTA Open New Window"
+                                    name="cta-open-new-win"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </fieldConfigs>
+                        </manualListing>
+                    </items>
+                </c1ManualListing>
+                <c1FeatureBanner
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="feature-banner"
+                    title="Feature Banner"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c1ImgPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Image path"
+                            name="./c1-img-path"
+                            xtype="pathfield"/>
+                        <c1Header
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If this is not filled, page title from the button path will be used instead."
+                            fieldLabel="Header Text"
+                            name="./c1-header_t"
+                            xtype="textfield"/>
+                        <c1Description
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Description"
+                            name="./c1-description_t"
+                            xtype="textfield"/>
+                        <c1ButtonText
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Button Text"
+                            name="./c1-button-text_t"
+                            xtype="textfield"/>
+                        <c1ButtonPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Button Path"
+                            name="./c1-button-path"
+                            xtype="pathfield"/>
+                        <c1ButtonOpenNewWin
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Check if the CTA is to be opened in new window."
+                            fieldLabel="CTA Open New Window"
+                            name="./c1-button-open-new-win"
+                            type="checkbox"
+                            xtype="selection"/>
+                    </items>
+                </c1FeatureBanner>
+            </items>
+        </column1>
+        <column2
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Column 2"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <c2Type
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Column 2 Type"
+                    name="./c2-type"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <typeEmpty
+                            jcr:primaryType="nt:unstructured"
+                            text="---Empty---"
+                            value=""/>
+                        <typeChildPages
+                            jcr:primaryType="nt:unstructured"
+                            text="List of Child Pages"
+                            value="child-pages"/>
+                        <typeManualListing
+                            jcr:primaryType="nt:unstructured"
+                            text="Manual Listing"
+                            value="manual-listing"/>
+                        <typeFeatureBanner
+                            jcr:primaryType="nt:unstructured"
+                            text="Feature Banner"
+                            value="feature-banner"/>
+                    </options>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function( field ){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var fieldSets = field.findParentByType('dialogfieldset');&#xa;&#x9;&#x9;var childFieldSets = fieldSets.findByType('dialogfieldset');&#x9;&#xa;&#x9;&#x9;for (var i = 0; i &lt; childFieldSets.length ; i++) {&#xa;&#x9;&#x9;&#x9;var fieldSet = childFieldSets[i];&#xa;&#xa;&#x9;&#x9;&#x9;if (field.value === fieldSet.getItemId()){&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.show();        &#xa;&#x9;&#x9;&#x9;} else {&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.hide();&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}   &#xa;&#x9;} &#xa;}"
+                        selectionchanged="function( field,value ){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var fieldSets = field.findParentByType('dialogfieldset');&#xa;&#x9;&#x9;var childFieldSets = fieldSets.findByType('dialogfieldset');&#x9;&#xa;&#x9;&#x9;for (var i = 0; i &lt; childFieldSets.length ; i++) {&#xa;&#x9;&#x9;&#x9;var fieldSet = childFieldSets[i];&#xa;&#xa;&#x9;&#x9;&#x9;if (value === fieldSet.getItemId()){&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.show();        &#xa;&#x9;&#x9;&#x9;} else {&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.hide();&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}   &#xa;&#x9;} &#xa;}"/>
+                </c2Type>
+                <c2ChildPages
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="child-pages"
+                    title="List of Child Pages"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c2CpHeader
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If this is not filled, page title will be used instead."
+                            fieldLabel="Header Text"
+                            name="./c2-cp-header_t"
+                            xtype="textfield"/>
+                        <c2ParentPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Parent path"
+                            name="./c2-parent-path"
+                            xtype="pathfield"/>
+                    </items>
+                </c2ChildPages>
+                <c2ManualListing
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="manual-listing"
+                    title="Manual Listing"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c2MlHeader
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Header Text"
+                            name="./c2-ml-header_t"
+                            xtype="textfield"/>
+                        <manualListing
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Manual Listing"
+                            name="./c2-manual-listing"
+                            xtype="multicompositefield">
+                            <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                                <cta-path
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="The CTA path."
+                                    fieldLabel="CTA Path"
+                                    name="cta-path"
+                                    xtype="pathfield"/>
+                                <cta-anchor
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="CTA anchor"
+                                    name="cta-anchor"
+                                    xtype="textfield"/>
+                                <cta-text
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="If this is not filled, page title will be used instead."
+                                    fieldLabel="CTA Text"
+                                    name="cta-text_t"
+                                    xtype="textfield"/>
+                                <cta-open-new-win
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Check if the CTA is to be opened in new window."
+                                    fieldLabel="CTA Open New Window"
+                                    name="cta-open-new-win"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </fieldConfigs>
+                        </manualListing>
+                    </items>
+                </c2ManualListing>
+                <c2FeatureBanner
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="feature-banner"
+                    title="Feature Banner"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c2ImgPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Image path"
+                            name="./c2-img-path"
+                            xtype="pathfield"/>
+                        <c2Header
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If this is not filled, page title from the button path will be used instead."
+                            fieldLabel="Header Text"
+                            name="./c2-header_t"
+                            xtype="textfield"/>
+                        <c2Description
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Description"
+                            name="./c2-description_t"
+                            xtype="textfield"/>
+                        <c2ButtonText
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Button Text"
+                            name="./c2-button-text_t"
+                            xtype="textfield"/>
+                        <c2ButtonPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Button Path"
+                            name="./c2-button-path"
+                            xtype="pathfield"/>
+                        <c2ButtonOpenNewWin
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Check if the CTA is to be opened in new window."
+                            fieldLabel="CTA Open New Window"
+                            name="./c2-button-open-new-win"
+                            type="checkbox"
+                            xtype="selection"/>
+                    </items>
+                </c2FeatureBanner>
+            </items>
+        </column2>
+        <column3
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Column 3"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <c3Type
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Column 3 Type"
+                    name="./c3-type"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <typeEmpty
+                            jcr:primaryType="nt:unstructured"
+                            text="---Empty---"
+                            value=""/>
+                        <typeChildPages
+                            jcr:primaryType="nt:unstructured"
+                            text="List of Child Pages"
+                            value="child-pages"/>
+                        <typeManualListing
+                            jcr:primaryType="nt:unstructured"
+                            text="Manual Listing"
+                            value="manual-listing"/>
+                        <typeFeatureBanner
+                            jcr:primaryType="nt:unstructured"
+                            text="Feature Banner"
+                            value="feature-banner"/>
+                    </options>
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function( field ){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var fieldSets = field.findParentByType('dialogfieldset');&#xa;&#x9;&#x9;var childFieldSets = fieldSets.findByType('dialogfieldset');&#x9;&#xa;&#x9;&#x9;for (var i = 0; i &lt; childFieldSets.length ; i++) {&#xa;&#x9;&#x9;&#x9;var fieldSet = childFieldSets[i];&#xa;&#xa;&#x9;&#x9;&#x9;if (field.value === fieldSet.getItemId()){&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.show();        &#xa;&#x9;&#x9;&#x9;} else {&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.hide();&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}   &#xa;&#x9;} &#xa;}"
+                        selectionchanged="function( field,value ){ &#xa;&#x9;if (field != null){ &#xa;&#x9;&#x9;var fieldSets = field.findParentByType('dialogfieldset');&#xa;&#x9;&#x9;var childFieldSets = fieldSets.findByType('dialogfieldset');&#x9;&#xa;&#x9;&#x9;for (var i = 0; i &lt; childFieldSets.length ; i++) {&#xa;&#x9;&#x9;&#x9;var fieldSet = childFieldSets[i];&#xa;&#xa;&#x9;&#x9;&#x9;if (value === fieldSet.getItemId()){&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.show();        &#xa;&#x9;&#x9;&#x9;} else {&#xa;&#x9;&#x9;&#x9;&#x9;fieldSet.hide();&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}   &#xa;&#x9;} &#xa;}"/>
+                </c3Type>
+                <c3ChildPages
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="child-pages"
+                    title="List of Child Pages"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c3CpHeader
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If this is not filled, page title will be used instead."
+                            fieldLabel="Header Text"
+                            name="./c3-cp-header_t"
+                            xtype="textfield"/>
+                        <c3ParentPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Parent path"
+                            name="./c3-parent-path"
+                            xtype="pathfield"/>
+                    </items>
+                </c3ChildPages>
+                <c3ManualListing
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="manual-listing"
+                    title="Manual Listing"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c3MlHeader
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Header Text"
+                            name="./c3-ml-header_t"
+                            xtype="textfield"/>
+                        <manualListing
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Manual Listing"
+                            name="./c3-manual-listing"
+                            xtype="multicompositefield">
+                            <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                                <cta-path
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="The CTA path."
+                                    fieldLabel="CTA Path"
+                                    name="cta-path"
+                                    xtype="pathfield"/>
+                                <cta-anchor
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="CTA anchor"
+                                    name="cta-anchor"
+                                    xtype="textfield"/>
+                                <cta-text
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="If this is not filled, page title will be used instead."
+                                    fieldLabel="CTA Text"
+                                    name="cta-text_t"
+                                    xtype="textfield"/>
+                                <cta-open-new-win
+                                    jcr:primaryType="cq:Widget"
+                                    fieldDescription="Check if the CTA is to be opened in new window."
+                                    fieldLabel="CTA Open New Window"
+                                    name="cta-open-new-win"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </fieldConfigs>
+                        </manualListing>
+                    </items>
+                </c3ManualListing>
+                <c3FeatureBanner
+                    jcr:primaryType="cq:Widget"
+                    collapsed="{Boolean}false"
+                    collapsible="{Boolean}false"
+                    itemId="feature-banner"
+                    title="Feature Banner"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <c3ImgPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Image path"
+                            name="./c3-img-path"
+                            xtype="pathfield"/>
+                        <c3Header
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="If this is not filled, page title from the button path will be used instead."
+                            fieldLabel="Header Text"
+                            name="./c3-header_t"
+                            xtype="textfield"/>
+                        <c3Description
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Description"
+                            name="./c3-description_t"
+                            xtype="textfield"/>
+                        <c3ButtonText
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Button Text"
+                            name="./c3-button-text_t"
+                            xtype="textfield"/>
+                        <c3ButtonPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Button Path"
+                            name="./c3-button-path"
+                            xtype="pathfield"/>
+                        <c3ButtonOpenNewWin
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Check if the CTA is to be opened in new window."
+                            fieldLabel="CTA Open New Window"
+                            name="./c3-button-open-new-win"
+                            type="checkbox"
+                            xtype="selection"/>
+                    </items>
+                </c3FeatureBanner>
+            </items>
+        </column3>
+    </items>
+</jcr:root>

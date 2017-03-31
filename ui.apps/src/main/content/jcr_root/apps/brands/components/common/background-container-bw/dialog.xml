@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:TabPanel"
+        manageTabs="function(tab){this.hideTabStripItem(1);this.hideTabStripItem(2);if(tab == 'Background Color'){this.unhideTabStripItem(1);}else{this.unhideTabStripItem(2);}this.doLayout();}">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="Background Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <bkgrd-style
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The background container style."
+                        fieldLabel="Background Style"
+                        name="./bkgrd-style"
+                        optionsProvider="CQ.utils.Css.getBackgroundStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <bkgrd-img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The background image path."
+                        fieldLabel="Image Path"
+                        name="./bkgrd-img-path"
+                        xtype="pathfield"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

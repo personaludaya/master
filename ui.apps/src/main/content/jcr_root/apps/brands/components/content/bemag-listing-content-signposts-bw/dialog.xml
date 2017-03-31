@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <bm-signposts-paths-config
+                jcr:primaryType="cq:Panel"
+                title="Article Signposts Paths">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <signposts-path-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Signposts Path Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-signposts-use-parent
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="{Boolean}false"
+                                fieldDescription="Check this to include all immediate Be Magazine Page created under current page for listing."
+                                fieldLabel="Use this page's children"
+                                name="./bm-signposts-use-parent"
+                                type="checkbox"
+                                xtype="selection"/>
+                            <bm-signposts-path
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}true"
+                                fieldDescription="Manually add Be Magazine Page paths to include in this listing."
+                                fieldLabel="Be Magazine Page Path(s)"
+                                name="./bm-signposts-path"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="cq:Widget"
+                                    xtype="pathfield"/>
+                            </bm-signposts-path>
+                        </items>
+                    </signposts-path-config>
+                </items>
+            </bm-signposts-paths-config>
+            <bm-signposts-display
+                jcr:primaryType="cq:Panel"
+                title="Article Signposts Display">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <signposts-grid-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Signposts Grid Configuration"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-signposts-row
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                defaultValue="1"
+                                fieldDescription="Number of rows to display on page load."
+                                fieldLabel="Number of Row(s)"
+                                name="./bm-signposts-row"
+                                xtype="numberfield"/>
+                            <bm-signposts-column
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                defaultValue="cols4"
+                                fieldDescription="Number of columns to display in each row."
+                                fieldLabel="Number of Columns"
+                                name="./bm-signposts-column"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <cols3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="3"
+                                        value="cols3"/>
+                                    <cols4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="4"
+                                        value="cols4"/>
+                                </options>
+                            </bm-signposts-column>
+                            <bm-signposts-show-cat
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="{Boolean}false"
+                                fieldDescription="Check this to display Be Magazine Category retrieved from the first value of Tags/Keywords."
+                                fieldLabel="Display Category"
+                                name="./bm-signposts-show-cat"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </items>
+                    </signposts-grid-config>
+                    <signposts-load-more-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Signposts Load More Style"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-load-more-label_t
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="{Boolean}false"
+                                defaultValue="Load more"
+                                fieldDescription="Label to display for loading more results."
+                                fieldLabel="Load More Label"
+                                name="./bm-load-more-label_t"
+                                optionsProvider="CQ.utils.Css.getCtaTextList"
+                                type="select"
+                                xtype="selection"/>
+                            <bm-load-label-alignment
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="text-center"
+                                fieldLabel="Load More Label Alignment"
+                                name="./bm-load-label-alignment"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="text-left"/>
+                                    <center
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Center"
+                                        value="text-center"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right"
+                                        value="text-right"/>
+                                </options>
+                            </bm-load-label-alignment>
+                            <bm-load-label-style
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="primary-color"
+                                fieldLabel="Load More Label Style"
+                                name="./bm-load-label-style"
+                                optionsProvider="CQ.utils.Css.getHeaderStyleList"
+                                type="select"
+                                xtype="selection"/>
+                        </items>
+                    </signposts-load-more-config>
+                    <signposts-header-config
+                        jcr:primaryType="cq:Widget"
+                        collapsed="{Boolean}false"
+                        collapsible="{Boolean}false"
+                        title="Signposts Header Style"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <bm-signposts-title-size
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="h4"
+                                fieldLabel="Signposts Title Size"
+                                name="./bm-signposts-title-size"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h4"
+                                        value="h4"/>
+                                    <h5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h5"
+                                        value="h5"/>
+                                </options>
+                            </bm-signposts-title-size>
+                            <bm-signposts-title-alignment
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="text-left"
+                                fieldLabel="Signposts Title Alignment"
+                                name="./bm-signposts-title-alignment"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="text-left"/>
+                                    <center
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Center"
+                                        value="text-center"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right"
+                                        value="text-right"/>
+                                </options>
+                            </bm-signposts-title-alignment>
+                            <bm-signposts-title-style
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="secondary-color"
+                                fieldLabel="Signposts Header Style"
+                                name="./bm-signposts-title-style"
+                                optionsProvider="CQ.utils.Css.getHeaderStyleList"
+                                type="select"
+                                xtype="selection"/>
+                        </items>
+                    </signposts-header-config>
+                </items>
+            </bm-signposts-display>
+        </items>
+    </items>
+</jcr:root>

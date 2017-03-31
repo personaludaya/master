@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Widget"
+                path="/apps/brands/components/admin/top-nav-admin-bw/dialog-general.infinity.json"
+                xtype="cqinclude"/>
+            <selflink
+                jcr:primaryType="cq:Widget"
+                path="/apps/brands/components/admin/top-nav-admin-bw/dialog-selflink.infinity.json"
+                xtype="cqinclude"/>
+            <displaypanel
+                jcr:primaryType="cq:Widget"
+                path="/apps/brands/components/admin/top-nav-admin-bw/dialog-displaypanel.infinity.json"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>

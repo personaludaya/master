@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <prdt-instr-title_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Product Instruction Title"
+                        fieldDescription="The product instruction title."
+                        name="./prdt-instr-title_t"
+                        xtype="textfield"/>
+                     <prdt-instr-subtitle_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Product Instruction Subtitle"
+                        fieldDescription="The product instruction subtitle."
+                        name="./prdt-instr-subtitle_t"
+                        xtype="textfield"/>
+                    <prdt-instr-copy_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The product instruction content copy."
+                        fieldLabel="Product Instruction Copy"
+                        name="./prdt-instr-copy_t"
+                        xtype="textarea"/>
+                  	<prdt-instr-img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The product instruction image path."
+                        fieldLabel="Product Instruction Image Path"
+                        name="./prdt-instr-img-path"
+                        xtype="pathfield"/>
+                    <prdt-instr-img-alt_t
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Instruction Image Alt Text"
+                        fieldDescription="The product instruction image alternate text. If this is blank, will use “Product Instruction Title”."
+                        name="./prdt-instr-img-alt_t"
+                        xtype="textfield"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

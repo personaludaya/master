@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <section-style
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The section container style. If invalid style is entered, 'none' will be selected by default"
+                        fieldLabel="Section Style"
+                        name="./section-style"
+                        optionsProvider="CQ.utils.Css.getSectionContainerStyleList"
+                        type="combobox"
+                        xtype="selection">
+                        <optionsConfig
+                            jcr:primaryType="nt:unstructured"
+                            typeAhead="{Boolean}true"
+                            typeAheadDelay="100"
+                            valueField="value"
+                            valueNotFoundText="none"/>
+                    </section-style>
+                    <border-bottom
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check if the css class for border bottom is to be appended."
+                        fieldLabel="Show Border Bottom"
+                        name="./show-border-bottom"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

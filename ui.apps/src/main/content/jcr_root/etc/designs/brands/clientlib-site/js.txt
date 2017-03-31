@@ -1,0 +1,16 @@
+#base=js
+be-magazine-container.js
+chatbot-container.js
+compare-products-container.js
+contest-participant-form-container.js
+footer.js
+header.js
+main.js
+our-product-toolbar-and-container.js
+popular-products.js
+product-instruction.js
+product-manufacturing-process.js
+product.js
+shared.js
+user-review.js
+your-brands-story-container.js

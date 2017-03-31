@@ -1,0 +1,654 @@
+[
+  {
+    "value": "home--screen1",
+    "text": "home--screen1"
+  },
+  {
+    "value": "home--screen2",
+    "text": "home--screen2"
+  },
+  {
+    "value": "home--screen3",
+    "text": "home--screen3"
+  },
+  {
+    "value": "home--screen4",
+    "text": "home--screen4"
+  },
+  {
+    "value": "home--screen5",
+    "text": "home--screen5"
+  },
+  {
+    "value": "our-product--banner",
+    "text": "our-product--banner"
+  },
+  {
+    "value": "our-product--toolbar-and-container",
+    "text": "our-product--toolbar-and-container"
+  },
+  {
+    "value": "product-comparison-bar-container",
+    "text": "product-comparison-bar-container"
+  },
+  {
+    "value": "discover-our-product",
+    "text": "discover-our-product"
+  },
+  {
+    "value": "discover-our-product--banner",
+    "text": "discover-our-product--banner"
+  },
+  {
+    "value": "discover-our-product--performance-for-you",
+    "text": "discover-our-product--performance-for-you"
+  },
+  {
+    "value": "discover-our-product--performance-for-your-kids",
+    "text": "discover-our-product--performance-for-your-kids"
+  },
+  {
+    "value": "discover-our-product--article-container",
+    "text": "discover-our-product--article-container"
+  },
+  {
+    "value": "discover-our-product--product-sale",
+    "text": "discover-our-product--product-sale"
+  },
+  {
+    "value": "product-detail--mandatory-essence-of-chicken-campaign",
+    "text": "product-detail--mandatory-essence-of-chicken-campaign"
+  },
+  {
+    "value": "product-detail--mandatory-essence-of-chicken-campaign--primary",
+    "text": "product-detail--mandatory-essence-of-chicken-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-essence-of-chicken-campaign--secondary",
+    "text": "product-detail--mandatory-essence-of-chicken-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-bn-rocksugar-campaign--primary",
+    "text": "product-detail--mandatory-bn-rocksugar-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-bn-rocksugar-campaign--secondary",
+    "text": "product-detail--mandatory-bn-rocksugar-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-activemove-campaign--primary",
+    "text": "product-detail--mandatory-activemove-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-activemove-campaign--secondary",
+    "text": "product-detail--mandatory-activemove-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-lutein-campaign--primary",
+    "text": "product-detail--mandatory-lutein-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-lutein-campaign--secondary",
+    "text": "product-detail--mandatory-lutein-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-genu-campaign--primary",
+    "text": "product-detail--mandatory-genu-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-genu-campaign--secondary",
+    "text": "product-detail--mandatory-genu-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-ruby-campaign--primary",
+    "text": "product-detail--mandatory-ruby-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-ruby-campaign--secondary",
+    "text": "product-detail--mandatory-ruby-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-grape-seed-campaign--primary",
+    "text": "product-detail--mandatory-grape-seed-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-grape-seed-campaign--secondary",
+    "text": "product-detail--mandatory-grape-seed-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-rubystrip-campaign--primary",
+    "text": "product-detail--mandatory-rubystrip-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-rubystrip-campaign--secondary",
+    "text": "product-detail--mandatory-rubystrip-campaign--secondary"
+  },
+  {
+    "value": "product-detail--mandatory-mushroom-campaign--primary",
+    "text": "product-detail--mandatory-mushroom-campaign--primary"
+  },
+  {
+    "value": "product-detail--mandatory-mushroom-campaign--secondary",
+    "text": "product-detail--mandatory-mushroom-campaign--secondary"
+  },
+  {
+    "value": "product-detail--info",
+    "text": "product-detail--info"
+  },
+  {
+    "value": "product-detail--ec-campaign1",
+    "text": "product-detail--ec-campaign1"
+  },
+  {
+    "value": "product-detail--ec-campaign2",
+    "text": "product-detail--ec-campaign2"
+  },
+  {
+    "value": "product-detail--activemove-campaign1",
+    "text": "product-detail--activemove-campaign1"
+  },
+  {
+    "value": "product-detail--genu-campaign1",
+    "text": "product-detail--genu-campaign1"
+  },
+  {
+    "value": "product-detail--genu-campaign2",
+    "text": "product-detail--genu-campaign2"
+  },
+  {
+    "value": "product-detail--lutein-campaign1",
+    "text": "product-detail--lutein-campaign1"
+  },
+  {
+    "value": "product-detail--lutein-campaign2",
+    "text": "product-detail--lutein-campaign2"
+  },
+  {
+    "value": "product-detail--product-campaign-sale",
+    "text": "product-detail--product-campaign-sale"
+  },
+  {
+    "value": "product-detail--achieve-greatness",
+    "text": "product-detail--achieve-greatness"
+  },
+  {
+    "value": "product-detail--about",
+    "text": "product-detail--about"
+  },
+  {
+    "value": "product-detail--product-instruction",
+    "text": "product-detail--product-instruction"
+  },
+  {
+    "value": "product-detail--product-instruction-essence-of-chicken",
+    "text": "product-detail--product-instruction-essence-of-chicken"
+  },
+  {
+    "value": "product-detail--product-instruction-bn-rocksugar",
+    "text": "product-detail--product-instruction-bn-rocksugar"
+  },
+  {
+    "value": "product-detail--product-instruction-activemove",
+    "text": "product-detail--product-instruction-activemove"
+  },
+  {
+    "value": "product-detail--product-instruction-lutein",
+    "text": "product-detail--product-instruction-lutein"
+  },
+  {
+    "value": "product-detail--product-instruction-genu",
+    "text": "product-detail--product-instruction-genu"
+  },
+  {
+    "value": "product-detail--product-instruction-ruby",
+    "text": "product-detail--product-instruction-ruby"
+  },
+  {
+    "value": "product-detail--product-instruction-rubystrip",
+    "text": "product-detail--product-instruction-rubystrip"
+  },
+  {
+    "value": "product-detail--product-nutrition",
+    "text": "product-detail--product-nutrition"
+  },
+  {
+    "value": "product-detail--product-faq",
+    "text": "product-detail--product-faq"
+  },
+  {
+    "value": "product-detail--product-ads",
+    "text": "product-detail--product-ads"
+  },
+  {
+    "value": "product-detail--product-manufacturing-process",
+    "text": "product-detail--product-manufacturing-process"
+  },
+  {
+    "value": "product-detail--product-sale",
+    "text": "product-detail--product-sale"
+  },
+  {
+    "value": "product-detail--product-related",
+    "text": "product-detail--product-related"
+  },
+  {
+    "value": "research-centre--anniversary",
+    "text": "research-centre--anniversary"
+  },
+  {
+    "value": "research-centre--mission",
+    "text": "research-centre--mission"
+  },
+  {
+    "value": "research-centre--technology",
+    "text": "research-centre--technology"
+  },
+  {
+    "value": "research-centre--scientific-milestones",
+    "text": "research-centre--scientific-milestones"
+  },
+  {
+    "value": "research-centre--commitment-to-research",
+    "text": "research-centre--commitment-to-research"
+  },
+  {
+    "value": "research-centre--manufacturing",
+    "text": "research-centre--manufacturing"
+  },
+  {
+    "value": "research-centre--patented-triple-safety-cap-container",
+    "text": "research-centre--patented-triple-safety-cap-container"
+  },
+  {
+    "value": "research-centre--patented-triple-safety-cap-container-image-right",
+    "text": "research-centre--patented-triple-safety-cap-container-image-right"
+  },
+  {
+    "value": "manufacturing-process--banner",
+    "text": "manufacturing-process--banner"
+  },
+  {
+    "value": "manufacturing--chickens-we-use",
+    "text": "manufacturing--chickens-we-use"
+  },
+  {
+    "value": "manufacturing--process-container",
+    "text": "manufacturing--process-container"
+  },
+  {
+    "value": "manufacturing--related-products",
+    "text": "manufacturing--related-products"
+  },
+  {
+    "value": "contests",
+    "text": "contests"
+  },
+  {
+    "value": "contests--essence-of-chicken",
+    "text": "contests--essence-of-chicken"
+  },
+  {
+    "value": "contests--innershine",
+    "text": "contests--innershine"
+  },
+  {
+    "value": "contests--past-contests",
+    "text": "contests--past-contests"
+  },
+  {
+    "value": "contest-participant-form",
+    "text": "contest-participant-form"
+  },
+  {
+    "value": "contest-participant-form-container",
+    "text": "contest-participant-form-container"
+  },
+  {
+    "value": "contest-participant-form-container-primary",
+    "text": "contest-participant-form-container-primary"
+  },
+  {
+    "value": "contest-participant-form-container-secondary",
+    "text": "contest-participant-form-container-secondary"
+  },
+  {
+    "value": "brandsworld-club-container",
+    "text": "brandsworld-club-container"
+  },
+  {
+    "value": "brandsworld-club-benefits",
+    "text": "brandsworld-club-benefits"
+  },
+  {
+    "value": "aboutus",
+    "text": "aboutus"
+  },
+  {
+    "value": "aboutus--vision",
+    "text": "aboutus--vision"
+  },
+  {
+    "value": "aboutus--research",
+    "text": "aboutus--research"
+  },
+  {
+    "value": "aboutus--the-greatness-index",
+    "text": "aboutus--the-greatness-index"
+  },
+  {
+    "value": "aboutus--100years",
+    "text": "aboutus--100years"
+  },
+  {
+    "value": "aboutus--social-responsibility",
+    "text": "aboutus--social-responsibility"
+  },
+  {
+    "value": "be-magazine-landing",
+    "text": "be-magazine-landing"
+  },
+  {
+    "value": "be-magazine-landing--popular-articles",
+    "text": "be-magazine-landing--popular-articles"
+  },
+  {
+    "value": "be-magazine-landing--latest-videos",
+    "text": "be-magazine-landing--latest-videos"
+  },
+  {
+    "value": "be-magazine-landing--campaign",
+    "text": "be-magazine-landing--campaign"
+  },
+  {
+    "value": "be-magazine-landing--listing-content",
+    "text": "be-magazine-landing--listing-content"
+  },
+  {
+    "value": "be-magazine-listing--filter",
+    "text": "be-magazine-listing--filter"
+  },
+  {
+    "value": "be-magazine-listing--listing-content",
+    "text": "be-magazine-listing--listing-content"
+  },
+  {
+    "value": "be-magazine-detail",
+    "text": "be-magazine-detail"
+  },
+  {
+    "value": "be-magazine-detail--read-also",
+    "text": "be-magazine-detail--read-also"
+  },
+  {
+    "value": "whatsnew--bite-sized",
+    "text": "whatsnew--bite-sized"
+  },
+  {
+    "value": "whatsnew-contests",
+    "text": "whatsnew-contests"
+  },
+  {
+    "value": "whatsnew--events",
+    "text": "whatsnew--events"
+  },
+  {
+    "value": "corporate-enquiries--health-talk",
+    "text": "corporate-enquiries--health-talk"
+  },
+  {
+    "value": "corporate-enquiries--road-shows",
+    "text": "corporate-enquiries--road-shows"
+  },
+  {
+    "value": "corporate-enquiries--bulk-purchase",
+    "text": "corporate-enquiries--bulk-purchase"
+  },
+  {
+    "value": "contact-form",
+    "text": "contact-form"
+  },
+  {
+    "value": "contact-footer-container",
+    "text": "contact-footer-container"
+  },
+  {
+    "value": "contact--picks-for-you",
+    "text": "contact--picks-for-you"
+  },
+  {
+    "value": "social-responsibility--video",
+    "text": "social-responsibility--video"
+  },
+  {
+    "value": "social-responsibility--visit-to",
+    "text": "social-responsibility--visit-to"
+  },
+  {
+    "value": "social-responsibility--initiative-in-singapore",
+    "text": "social-responsibility--initiative-in-singapore"
+  },
+  {
+    "value": "search-result-container",
+    "text": "search-result-container"
+  },
+  {
+    "value": "global-landing-container",
+    "text": "global-landing-container"
+  },
+  {
+    "value": "country-specific-landing-container",
+    "text": "country-specific-landing-container"
+  },
+  {
+    "value": "bundles-landing-container",
+    "text": "bundles-landing-container"
+  },
+  {
+    "value": "bundles-landing-container--info",
+    "text": "bundles-landing-container--info"
+  },
+  {
+    "value": "bundles-landing-container--first-content",
+    "text": "bundles-landing-container--first-content"
+  },
+  {
+    "value": "bundles-details",
+    "text": "bundles-details"
+  },
+  {
+    "value": "bundles-detail--bundle-content",
+    "text": "bundles-detail--bundle-content"
+  },
+  {
+    "value": "bundles-detail--bundle-articles",
+    "text": "bundles-detail--bundle-articles"
+  },
+  {
+    "value": "campaign--info",
+    "text": "campaign--info"
+  },
+  {
+    "value": "campaign--video",
+    "text": "campaign--video"
+  },
+  {
+    "value": "campaign--chronicles-of-western-herb",
+    "text": "campaign--chronicles-of-western-herb"
+  },
+  {
+    "value": "campaign--fly-to-london",
+    "text": "campaign--fly-to-london"
+  },
+  {
+    "value": "campaign--testimonial",
+    "text": "campaign--testimonial"
+  },
+  {
+    "value": "campaign--social-wall",
+    "text": "campaign--social-wall"
+  },
+  {
+    "value": "terms-privacy-container",
+    "text": "terms-privacy-container"
+  },
+  {
+    "value": "terms-privacy-container--content",
+    "text": "terms-privacy-container--content"
+  },
+  {
+    "value": "sitemap-container",
+    "text": "sitemap-container"
+  },
+  {
+    "value": "sitemap-container--content",
+    "text": "sitemap-container--content"
+  },
+  {
+    "value": "news-container",
+    "text": "news-container"
+  },
+  {
+    "value": "news-container--featured-news",
+    "text": "news-container--featured-news"
+  },
+  {
+    "value": "news-container--news",
+    "text": "news-container--news"
+  },
+  {
+    "value": "news-detail--video",
+    "text": "news-detail--video"
+  },
+  {
+    "value": "news-detail--info",
+    "text": "news-detail--info"
+  },
+  {
+    "value": "news-detail--other-news",
+    "text": "news-detail--other-news"
+  },
+  {
+    "value": "ingredients-detail--header",
+    "text": "ingredients-detail--header"
+  },
+  {
+    "value": "ingredients-detail--info",
+    "text": "ingredients-detail--info"
+  },
+  {
+    "value": "ingredients-detail--enjoy-the-benefits",
+    "text": "ingredients-detail--enjoy-the-benefits"
+  },
+  {
+    "value": "faq",
+    "text": "faq"
+  },
+  {
+    "value": "faq--category",
+    "text": "faq--category"
+  },
+  {
+    "value": "faq--content",
+    "text": "faq--content"
+  },
+  {
+    "value": "milestone--info",
+    "text": "milestone--info"
+  },
+  {
+    "value": "milestone--milestone-content",
+    "text": "milestone--milestone-content"
+  },
+  {
+    "value": "milestone--milestone-content-2005",
+    "text": "milestone--milestone-content-2005"
+  },
+  {
+    "value": "milestone--toolbar",
+    "text": "milestone--toolbar"
+  },
+  {
+    "value": "milestone--milestone-content-2006",
+    "text": "milestone--milestone-content-2006"
+  },
+  {
+    "value": "milestone--milestone-content-2000",
+    "text": "milestone--milestone-content-2000"
+  },
+  {
+    "value": "milestone--milestone-content-2c",
+    "text": "milestone--milestone-content-2c"
+  },
+  {
+    "value": "milestone--milestone-content-2010",
+    "text": "milestone--milestone-content-2010"
+  },
+  {
+    "value": "compare-product",
+    "text": "compare-product"
+  },
+  {
+    "value": "compare-product--products",
+    "text": "compare-product--products"
+  },
+  {
+    "value": "store-location",
+    "text": "store-location"
+  },
+  {
+    "value": "store-location--container",
+    "text": "store-location--container"
+  },
+  {
+    "value": "campaign-unlockinggreatness",
+    "text": "campaign-unlockinggreatness"
+  },
+  {
+    "value": "campaign-unlockinggreatness-image-bottom",
+    "text": "campaign-unlockinggreatness-image-bottom"
+  },
+  {
+    "value": "campaign-unlockinggreatness-image-top",
+    "text": "campaign-unlockinggreatness-image-top"
+  },
+  {
+    "value": "campaign-getset",
+    "text": "campaign-getset"
+  },
+  {
+    "value": "campaign-video-player-container",
+    "text": "campaign-video-player-container"
+  },
+  {
+    "value": "primary-background-color",
+    "text": "primary-background-color"
+  },
+  {
+    "value": "secondary-background-color",
+    "text": "secondary-background-color"
+  },
+  {
+    "value": "generic-text-component",
+    "text": "generic-text-component"
+  },
+  {
+    "value": "generic-text-component-no-margin-bottom",
+    "text": "generic-text-component-no-margin-bottom"
+  },
+  {
+    "value": "generic-2columns-banner-component",
+    "text": "generic-2columns-banner-component"
+  },
+  {
+    "value": "generic-2columns-carousel",
+    "text": "generic-2columns-carousel"
+  },
+  {
+    "value": "brandsworld-club-benefits-primary",
+    "text": "brandsworld-club-benefits-primary"
+  },
+  {
+    "value": "brandsworld-club-benefits-secondary",
+    "text": "brandsworld-club-benefits-secondary"
+  }
+]

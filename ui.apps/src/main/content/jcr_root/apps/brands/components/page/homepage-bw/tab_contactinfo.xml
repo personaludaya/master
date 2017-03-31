@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Contact Info">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<contact-config-path
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            fieldLabel="Configuration Path"
+            fieldDescription="Path of admin page where Contact Information is configured in a 'Contact Info Admin' component"
+            name="./contactConfigPath"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <admin
+                jcr:primaryType="cq:Panel"
+                title="Admin">
+                <items jcr:primaryType="cq:WidgetCollection">
+                	<faq-prdt-category
+	                    jcr:primaryType="cq:Widget"
+	                    allowBlank="{Boolean}false"
+	                    fieldDescription="The faq product category."
+	                    fieldLabel="FAQ Product Category"
+	                    name="./faq-prdt-category"
+	                    namespaces="[brands]"
+	                    xtype="tags"/>
+                    <faq-qns_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The faq question."
+                        fieldLabel="FAQ Question"
+                        name="./faq-qns_t"
+                        xtype="textfield"/>
+                    <faq-ans_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The faq answer."
+                        fieldLabel="FAQ Answer"
+                        name="./faq-ans_t"
+                        xtype="textarea"/>
+                           <faq-ans-bullets_t
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="FAQ Answer Bullets"
+                        hideLabel="false"
+                        name="./faq-ans-bullets_t"
+                        title="Faq Answer"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="true"
+                            hideLabel="true"
+                            layout="form"
+                            padding="10px"
+                            width="1000"
+                            xtype="multi-field-panel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <product-year-value
+                                    jcr:primaryType="cq:Widget"
+                                    dName="text"
+                                    fieldLabel="Heading Text"
+                                    width="100%"
+                                    xtype="textfield"/>
+                                <product-region-multifield
+                                    jcr:primaryType="cq:Widget"
+                                    dName="children"
+                                    fieldLabel="Description"
+                                    hideLabel="false"
+                                    title="Add Description"
+                                    xtype="multifield">
+                                    <fieldConfig
+                                        jcr:primaryType="cq:Widget"
+                                        border="true"
+                                        hideLabel="true"
+                                        layout="form"
+                                        padding="10px"
+                                        width="1000"
+                                        xtype="multi-field-panel">
+                                        <items jcr:primaryType="cq:WidgetCollection">
+                                            <product-country
+                                                jcr:primaryType="cq:Widget"
+                                                dName="text"
+                                                fieldLabel="Description"
+                                                width="100%"
+                                                xtype="textfield"/>
+                                        </items>
+                                    </fieldConfig>
+                                </product-region-multifield>
+                            </items>
+                        </fieldConfig>
+                    </faq-ans-bullets_t>
+                </items>
+            </admin>
+        </items>
+    </items>
+</jcr:root>

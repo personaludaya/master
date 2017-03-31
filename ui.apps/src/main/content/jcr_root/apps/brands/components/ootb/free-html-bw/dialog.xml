@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <free-html
+                        jcr:primaryType="cq:Widget"
+                        description="Any input will be rendered as it is."
+                        height="200"
+                        hideLabel="true"
+                        name="./free-html"
+                        xtype="textarea"/>
+                    <hide-in-mobile
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check if this should be hidden in mobile."
+                        fieldLabel="Hide in mobile"
+                        name="./hide-in-mobile"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

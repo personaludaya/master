@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:layout="rollover"
+    jcr:primaryType="cq:EditConfig">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        afteredit="function() { if (!Granite.author) { if (CQ &amp;&amp; CQ.wcm &amp;&amp; CQ.wcm.EditBase &amp;&amp; CQ.wcm.EditBase.refreshPage) { CQ.wcm.EditBase.refreshPage();} }  else { var e = $.Event('editable-refreshed', {path: this.path}); $(document).trigger(e);} } "
+        ready="function(){ CQ.personalization.TargetEditor.get(this); }"/>
+</jcr:root>

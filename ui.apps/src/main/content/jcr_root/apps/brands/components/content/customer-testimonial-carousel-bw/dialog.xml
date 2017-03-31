@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <content
+                jcr:primaryType="cq:Panel"
+                title="Customer Testimonial Carousel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <timing
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The number of seconds before each element changes. The default value is 7; the minimum value is 5. If value is lesser than 5, there's no autoplay."
+                        fieldLabel="Timing"
+                        name="./timing"
+                        xtype="numberfield"/>
+                    <testimonial-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The carousel elements. Allow up to 6x instances."
+                        fieldLabel="Testimonials"
+                        name="./testimonial-path"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="pathfield"/>
+                    </testimonial-path>
+                </items>
+            </content>
+        </items>
+    </items>
+</jcr:root>

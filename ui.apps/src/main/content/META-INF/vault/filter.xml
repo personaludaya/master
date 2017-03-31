@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/brands">
+        <exclude pattern="/apps/brands/install" />
+    </filter>
+    <filter root="/apps/cq" />    
+    <filter root="/apps/foundation" />
+    <filter root="/apps/sling" />
+    <filter root="/apps/system" />
+    <filter root="/apps/wcm/core"/>
+    <filter root="/etc/designs/brands"/>
+    <filter root="/etc/tags">
+        <exclude pattern="/etc/tags/*.*" />
+    </filter>
+</workspaceFilter>

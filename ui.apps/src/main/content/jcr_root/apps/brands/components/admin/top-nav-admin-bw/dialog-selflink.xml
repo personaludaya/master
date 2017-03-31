@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Widget"
+    anchor="100%"
+    itemId="selflink"
+    title="Self Link"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <ctaOpenNewWin
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Check if the CTA is to be opened in new window."
+            fieldLabel="CTA Open New Window"
+            name="./cta-open-new-win"
+            type="checkbox"
+            xtype="selection"/>
+        <cta-hide-in-desktop
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Check if the CTA is to be viewed in Mobile only."
+            fieldLabel="CTA Hide In Desktop"
+            name="./cta-hide-in-desktop"
+            type="checkbox"
+            xtype="selection"/>
+    </items>
+</jcr:root>

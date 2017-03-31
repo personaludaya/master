@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Footer">
+    <items jcr:primaryType="cq:WidgetCollection">
+    	<footerConfigPath
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Footer Config Path"
+	        name="./footerConfigPath"
+	        xtype="pathfield"/>
+        <footerType
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Footer Type"
+            defaultValue="0"
+            fieldDescription="Defaults to Original (Green Background)"
+            name="./footerType"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <fb
+                    jcr:primaryType="nt:unstructured"
+                    text="Original"
+                    value="0"/>
+                <twit
+                    jcr:primaryType="nt:unstructured"
+                    text="Country specific"
+                    value="1"/>
+            </options>
+        </footerType>
+        <backToTopLabel_t
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Back to Top Label"
+	        name="./backToTopLabel_t"
+	        xtype="textfield"/>
+	    <copyrightLabel_t
+	        jcr:primaryType="cq:Widget"
+	        fieldLabel="Copyright Label"
+	        name="./copyrightLabel_t"
+	        xtype="textarea"/>
+        <footer-bottom-links
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Footer Bottom Links"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <link-paths
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Links"
+                    name="./btmf-link-paths"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        xtype="pathfield"/>
+                </link-paths>
+            </items>
+        </footer-bottom-links>
+    </items>
+</jcr:root>

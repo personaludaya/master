@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Miscellaneous">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <head-tag
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Head Tag"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <prop-img-path-inherited
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Logo / Image (Inherited)"
+                    name="./prop-img-path-inherited"
+                    xtype="pathfield"/>
+                <prop-img-path-current
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Logo / Image (Current Image)"
+                    name="./prop-img-path-current"
+                    xtype="pathfield"/>
+                <head-script-inherited
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This allows input of scripts that will be included within the &lt;head> tag of the current page and inherited throughout all child pages."
+                    fieldLabel="Head Script (Inherited)"
+                    height="120"
+                    name="./head-script-inherited"
+                    xtype="textarea"/>
+                <head-script-current
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This allows input of scripts that will be included within the &lt;head> tag of a page."
+                    fieldLabel="Head Script (Current Page)"
+                    height="120"
+                    name="./head-script-current"
+                    xtype="textarea"/>
+                <third-party-tracking-inherited
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This allows input of HTML or JavaScript tags that will be included within the &lt;head> tag of the current page and inherited throughout all child pages."
+                    fieldLabel="3rd Party Tracking Code (Inherited)"
+                    height="120"
+                    name="./third-party-tracking-inherited"
+                    xtype="textarea"/>
+                <third-party-tracking-current
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="This allows input of HTML or JavaScript tags that will be included within the &lt;head> tag of a page."
+                    fieldLabel="3rd Party Tracking Code (Current Page)"
+                    height="120"
+                    name="./third-party-tracking-current"
+                    xtype="textarea"/>
+            </items>
+        </head-tag>
+        <body-tag
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Body Tag"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <content-addition-current
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The addition content with JavaScript that will be included before the &lt;/body> tag of the current page"
+                    fieldLabel="Additional Content (Current Page)"
+                    height="120"
+                    name="./content-addition-current"
+                    xtype="textarea"/>
+                <content-addition-inherited
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The addition content with JavaScript that will be included before the &lt;/body> tag of the current page and inherited throughout all child pages."
+                    fieldLabel="Additional Content (Inherited)"
+                    height="120"
+                    name="./content-addition-inherited"
+                    xtype="textarea"/>
+            </items>
+        </body-tag>
+    </items>
+</jcr:root>

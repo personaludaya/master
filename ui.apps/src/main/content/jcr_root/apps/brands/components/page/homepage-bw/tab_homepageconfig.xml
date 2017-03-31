@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Homepage Config">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <homepage-config-disclaimer
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Only background images and styles for the listed components are configured here. For Product Canvas component, please configure in the Product Page, while configuration for Campaign Carousel will be done at the its Admin component. If the below fields are empty, default images and styles will be used."
+            fieldLabel="Note"
+            xtype="displayfield"/>
+        <chatbot-bkgrd-img-path
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            fieldLabel="ChatBot Background Image Path"
+            name="./chatbot-bkgrd-img-path"
+            xtype="pathfield"/>
+        <chatbot-bkgrd-style
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            defaultValue="background-cover-image"
+            fieldLabel="ChatBot Background Style"
+            name="./chatbot-bkgrd-style"
+            optionsProvider="CQ.utils.Css.getBackgroundStyleList"
+            type="select"
+            xtype="selection"/>
+        <bemag-bkgrd-img-path
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            fieldLabel="Be Magazine Background Image Path"
+            name="./bemag-bkgrd-img-path"
+            xtype="pathfield"/>
+        <bemag-bkgrd-style
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            defaultValue="background-cover-image"
+            fieldLabel="Be Magazine Background Style"
+            name="./bemag-bkgrd-style"
+            optionsProvider="CQ.utils.Css.getBackgroundStyleList"
+            type="select"
+            xtype="selection"/>
+        <instagramwall-bkgrd-img-path
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            fieldLabel="Instagram Wall Background Image Path"
+            name="./instagramwall-bkgrd-img-path"
+            xtype="pathfield"/>
+        <instagramwall-bkgrd-style
+            jcr:primaryType="cq:Widget"
+            allowBlank="true"
+            defaultValue="background-cover-image"
+            fieldLabel="Instagram Wall Background Style"
+            name="./instagramwall-bkgrd-style"
+            optionsProvider="CQ.utils.Css.getBackgroundStyleList"
+            type="select"
+            xtype="selection"/>
+    </items>
+</jcr:root>

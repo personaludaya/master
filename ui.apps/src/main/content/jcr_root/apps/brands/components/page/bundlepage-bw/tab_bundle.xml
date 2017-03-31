@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Bundle">
+    <items jcr:primaryType="cq:WidgetCollection">
+       <details
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Details"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <bundle-category
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    fieldDescription="The bundle category."
+                    fieldLabel="Bundle Category"
+                    name="./bundle-category"
+                    namespaces="[brands]"
+                    xtype="tags"/>
+                <bundle-img-path
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The bundle image path."
+                    fieldLabel="Bundle Image Path"
+                    name="./bundle-img-path"
+                    xtype="pathfield"/>
+                <bundle-img-alt_t
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The bundle image alternate text. If this is blank, will use “Title”."
+                    fieldLabel="Bundle Image Alt Text"
+                    name="./bundle-img-alt_t"
+                    xtype="textfield"/>
+                <bundle-prdt-paths
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product paths that the bundle consists of."
+                    fieldLabel="Product Paths"
+                    name="./bundle-prdt-paths"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="pathfield"/>
+                </bundle-prdt-paths>
+                <bundle-price-currency
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The bundle currency."
+                    fieldLabel="Price Currency"
+                    name="./bundle-price-currency"
+                    optionsProvider="CQ.utils.Css.getPrdtPriceCurrencyList"
+                    type="select"
+                    xtype="selection"/>
+                <hide-bundle-price
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Check if this should be hidden."
+                    fieldLabel="Hide Product Price"
+                    name="./hide-bundle-price"
+                    type="checkbox"
+                    xtype="selection"/>    
+                <bundle-ec-cta-text
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product CTA text to ecommerce, i.e. buy now."
+                    fieldLabel="CTA Text to Ecommerce"
+                    name="./bundle-ec-cta-text"
+                    optionsProvider="CQ.utils.Css.getCtaTextList"
+                    type="select"
+                    xtype="selection"/>    
+            </items>
+        </details>
+        <ecommerce
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Ecommerce"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <prdt-id
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The ecommerce product id."
+                    fieldLabel="Product ID"
+                    name="./prdt-id"
+                    xtype="textfield"/>
+                <prdt-ec-category-id
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The ecommerce product category id."
+                    fieldLabel="Product Category ID"
+                    name="./prdt-ec-category-id"
+                    xtype="textfield"/>
+                <prdt-ec-url
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The ecommerce product URL."
+                    fieldLabel="Ecommerce URL"
+                    name="./prdt-ec-url"
+                    xtype="pathfield"/>
+                <prdt-retail-price
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The product retail price."
+                    fieldLabel="Retail Price"
+                    name="./prdt-retail-price"
+                    xtype="numberfield"/>
+                <prdt-retail-price-title
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product retail price title."
+                    fieldLabel="Retail Price Title"
+                    name="./prdt-retail-price-title"
+                    optionsProvider="CQ.utils.Css.getPrdtPriceTitleList"
+                    type="select"
+                    xtype="selection"/>
+                <prdt-special-price
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The product special price."
+                    fieldLabel="Special Price"
+                    name="./prdt-special-price"
+                    xtype="numberfield"/>
+                <prdt-special-price-title
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The product special price title."
+                    fieldLabel="Special Price Title"
+                    name="./prdt-special-price-title"
+                    optionsProvider="CQ.utils.Css.getPrdtPriceTitleList"
+                    type="select"
+                    xtype="selection"/>
+            </items>
+        </ecommerce>
+    </items>
+</jcr:root>

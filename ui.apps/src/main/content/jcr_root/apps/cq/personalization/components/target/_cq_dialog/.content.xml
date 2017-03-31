@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Target"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    class="cq_personalization_dialog_target"
+    extraClientlibs="[cq.authoring.dialog,cq.authoring.testandtarget.target.dialog,personalization.kernel]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container"
+        class="target-options-dialog">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <location
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="The name of this mbox location. Defaults to repository path"
+                        fieldLabel="Location"
+                        id="cq-personalization-target-dialog-locationname"
+                        name="./location"
+                        required="{Boolean}true"/>
+                    <hiddenLocation
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                        id="cq-personalization-target-dialog-oldlocationname"
+                        name="oldLocationName"/>
+                    <engine
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        class="cq-dialog-dropdown-showhide"
+                        cq-dialog-dropdown-showhide-target=".target-option-engine-showhide-target"
+                        fieldDescription="Select target execution engine. If not set, defaults to 'Adobe Target' if such a cloud service config is present, otherwise 'Client-side Rules (without tracking)' is used."
+                        fieldLabel="Engine"
+                        name="./cq:targetEngine"
+                        value="">
+                        <items jcr:primaryType="nt:unstructured">
+                            <empty
+                                jcr:primaryType="nt:unstructured"
+                                text="(not set)"
+                                value=""/>
+                            <cq
+                                jcr:primaryType="nt:unstructured"
+                                text="Client-side Rules (without tracking)"
+                                value="cq"/>
+                            <cq_contexthub
+                                jcr:primaryType="nt:unstructured"
+                                text="ContextHub"
+                                value="cq_contexthub"/>
+                            <cq_campaign
+                                jcr:primaryType="nt:unstructured"
+                                text="Adobe Campaign"
+                                value="cq_campaign"/>
+                            <tnt
+                                jcr:primaryType="nt:unstructured"
+                                text="Adobe Target"
+                                value="tnt"/>
+                        </items>
+                    </engine>
+                    <wellClientSide
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/well"
+                        class="hide target-option-engine-showhide-target"
+                        showhidetargetvalue="cq">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/heading"
+                                level="{Long}4"
+                                text="Options for Client Side"/>
+                            <strategypath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Determines which experience is shown when multiple match."
+                                fieldLabel="Strategy"
+                                name="./strategyPath">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/personalization/components/target/strategypathdatasource"/>
+                            </strategypath>
+                        </items>
+                    </wellClientSide>
+                    <wellContextHub
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/well"
+                        class="hide target-option-engine-showhide-target"
+                        showhidetargetvalue="cq_contexthub">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/heading"
+                                level="{Long}4"
+                                text="Options for Client Side"/>
+                            <strategyName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Determines which experience is shown when multiple match."
+                                fieldLabel="Strategy"
+                                name="./strategyName"/>
+                            <selectedStrategyName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                class="currently-selected-strategy"
+                                disabled="true"
+                                name="./strategyName"/>
+                        </items>
+                    </wellContextHub>
+                    <wellAdobeTarget
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/well"
+                        class="hide target-option-engine-showhide-target"
+                        showhidetargetvalue="tnt">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/heading"
+                                level="{Long}4"
+                                text="Options for Target"/>
+                            <accurateTargeting
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Waits until the ClientContext is loaded and therefore may increase load time. Note that when authoring this is always considered to be true."
+                                id="cq_personalization_dialog_target_accurateTargeting"
+                                name="./accurateTargeting"
+                                text="Accurate targeting"
+                                value="true"/>
+                            <typeAccurateTargeting
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./accurateTargeting@TypeHint"
+                                value="Boolean"/>
+                            <includeSegments
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                fieldDescription="Includes all resolved segments in the mbox call, in addition to the parameters configured in the page and in the framework. Requires accurate targeting enabled to function on publish instances."
+                                id="cq_personalization_dialog_target_includeSegments"
+                                name="./includeResolvedSegments"
+                                text="Include resolved segments"
+                                value="true"/>
+                            <inheritedMappings
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                fieldDescription="Parameters inherited from the configuration associated with this page"
+                                fieldLabel="Inherited context parameters"
+                                id="cq_personalization_dialog_target_inherited_parameters"
+                                name="inhMappings"
+                                readOnly="{Boolean}true"/>
+                            <mappings
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                fieldLabel="Context parameter"
+                                id="cq_personalization_dialog_target_multifield_mappings">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/personalization/components/target/dialogcomponents/mappingsselect"
+                                    name="./cq:mappings"/>
+                            </mappings>
+                            <typehintmappings
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./cq:mappings@TypeHint"
+                                value="String[]"/>
+                            <staticParams
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                fieldLabel="Static parameter"
+                                id="cq_personalization_dialog_target_multifield_staticparams">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/personalization/components/target/dialogcomponents/staticparaminput"
+                                    name="./staticParams"/>
+                            </staticParams>
+                            <typehintstaticparams
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./staticParams@TypeHint"
+                                value="String[]"/>
+                        </items>
+                    </wellAdobeTarget>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

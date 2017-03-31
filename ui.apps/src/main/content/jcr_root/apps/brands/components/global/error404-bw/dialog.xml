@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Error 404">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The title text."
+                        fieldLabel="Title"
+                        name="./title_t"
+                        xtype="textfield"/>
+                    <header_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The header text."
+                        fieldLabel="Header"
+                        name="./header_t"
+                        xtype="textfield"/>
+                    <content_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content copy."
+                        fieldLabel="Content"
+                        name="./content_t"
+                        xtype="richtext"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

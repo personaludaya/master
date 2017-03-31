@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    anchor="100%"
+    title="Customer Care"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">             
+        <customer-care
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Customer Care"
+            name="./customer-care"
+            xtype="multicompositefield">
+            <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+            	<customer-care-name
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Customer Care Label"
+                    name="customer-care-label_t"
+                    xtype="textfield"/>
+                <customer-care-line
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Customer Care Line"
+                    name="customer-care-line"
+                    xtype="textfield"/>
+                <customer-care-note_t
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Customer Care Note"
+                    name="customer-care-note_t"
+                    xtype="textarea"/>
+            </fieldConfigs>
+        </customer-care>
+    </items>
+</jcr:root>

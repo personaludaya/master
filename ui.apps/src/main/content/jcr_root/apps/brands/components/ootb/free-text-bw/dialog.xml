@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        description="Any input will be rendered as it is."
+                        hideLabel="true"
+                        name="./text"
+                        xtype="richtext">
+                        <rtePlugins
+							jcr:primaryType="cq:Widget"
+                            path="/apps/brands/components/ootb/rich-text-bw/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </text>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

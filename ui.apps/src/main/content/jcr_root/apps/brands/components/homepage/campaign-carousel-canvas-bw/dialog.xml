@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <campaign-carousel-config
+                jcr:primaryType="cq:Panel"
+                title="Campaign Carousel Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <cmpgn-admin-paths
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Add a maximum of 3 Campaign Banners by pointing to each of their Admin Page path."
+                        fieldLabel="Admin Page Path(s)"
+                        name="./cmpgn-admin-paths"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            limit="3"
+                            xtype="pathfield"/>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list, component, index) { var length = list.items.length; var addButton = list.items.items[length - 1]; if (length == list.fieldConfig.limit) {addButton.hide();} }"
+                            removeditem="function(list) { var length = list.items.length; if (length &lt;= list.fieldConfig.limit) { list.items.items[length - 1].show();} }"/>
+                    </cmpgn-admin-paths>
+                    <carousel-interval-unit
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="seconds"
+                        fieldLabel="Carousel Interval Unit"
+                        name="./carousel-interval-unit"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <milliseconds
+                                jcr:primaryType="nt:unstructured"
+                                text="milliseconds"
+                                value="milliseconds"/>
+                            <seconds
+                                jcr:primaryType="nt:unstructured"
+                                text="seconds"
+                                value="seconds"/>
+                            <minutes
+                                jcr:primaryType="nt:unstructured"
+                                text="minutes"
+                                value="minutes"/>
+                        </options>
+                    </carousel-interval-unit>
+                    <carousel-interval-value
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="300"
+                        fieldDescription="The interval, based on the selected Unit of Time, for auto-rotating each Campaign Banner."
+                        fieldLabel="Carousel Interval"
+                        name="./carousel-interval-value"
+                        xtype="numberfield"/>
+                </items>
+            </campaign-carousel-config>
+            <campaign-carousel-custom
+                jcr:primaryType="cq:Panel"
+                title="Custom Campaign Carousel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <campaign-bkgrd-img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Background Image Path"
+                        name="./campaign-bkgrd-img-path"
+                        xtype="pathfield"/>
+                    <campaign-bkgrd-style
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Background Style"
+                        name="./campaign-bkgrd-style"
+                        optionsProvider="CQ.utils.Css.getPageBackgroundStyleList"
+                        type="select"
+                        xtype="selection"/>
+                    <campaign-freeform
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The freeform content. &#xa;If this is populated, it will overrule the other properties and will be used instead."
+                        fieldLabel="Freeform Content"
+                        height="240"
+                        name="./campaign-freeform"
+                        xtype="textarea"/>
+                </items>
+            </campaign-carousel-custom>
+        </items>
+    </items>
+</jcr:root>

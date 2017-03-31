@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Basic">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <basic
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldLabel="Title"
+                    name="./jcr:title"
+                    xtype="textfield"/>
+                <pagetitle
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldLabel="Page Title"
+                    name="./pageTitle"
+                    xtype="textfield"/>
+                <overview-header
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldLabel="Overview Header"
+                    name="./overview-header"
+                    xtype="textfield"/>
+                <description
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="false"
+                    fieldLabel="Overview"
+                    name="./jcr:description"
+                    xtype="textarea"/>
+                <page-contentcategory
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-tags"
+                    fieldDescription="The page info content category for Analytics."
+                    fieldLabel="Page Content Category"
+                    name="./page-contentcategory"
+                    namespaces="[brands]"
+                    xtype="tags"/>
+                <tags
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-tags"
+                    fieldLabel="Tags/Keywords"
+                    name="./cq:tags"
+                    namespaces="[brands]"
+                    xtype="tags"/>
+                <primary-tag
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="The primary tag. This field is read-only, and used to inform the content author what the primary tag is."
+                    fieldLabel="Page Primary Tag"
+                    name="./primary-tag"
+                    options="$PATH.getPrimaryTag.json"
+                    optionsRoot="."
+                    type="combobox"
+                    xtype="selection"/>
+                <seo-title
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Title SEO/Browser"
+                    name="./seo-title"
+                    xtype="textfield"/>
+                <meta-description
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Meta Description"
+                    name="./meta-description"
+                    xtype="textarea"/>
+                <seotags
+                    jcr:primaryType="cq:Widget"
+                    cls="cq-propsdialog-tags"
+                    fieldLabel="SEO Tags/Keywords"
+                    name="./seotags"
+                    namespaces="[brands-seo]"
+                    xtype="tags"/>
+                <canonical
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Canonical Url"
+                    name="./canonical"
+                    xtype="pathfield"/>
+            </items>
+        </basic>
+        <more_titles
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="More Titles and Description"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <navtitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Navigation Title"
+                    name="./navTitle"
+                    xtype="textfield"/>
+                <subtitle
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Subtitle"
+                    name="./subtitle"
+                    xtype="textfield"/>
+            </items>
+        </more_titles>
+        <onofftime
+            jcr:primaryType="cq:Widget"
+            cls="cq-propsdialog-set-onofftime"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="On/Off Time"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <offTimeHint
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./offTime@TypeHint"
+                    value="Date"
+                    xtype="hidden"/>
+                <offtime
+                    jcr:primaryType="cq:Widget"
+                    ctCls="cq-propsdialog-offtime"
+                    fieldLabel="Off Time"
+                    name="./offTime"
+                    xtype="datetime"/>
+                <onTimeHint
+                    jcr:primaryType="cq:Widget"
+                    ignoreData="{Boolean}true"
+                    name="./onTime@TypeHint"
+                    value="Date"
+                    xtype="hidden"/>
+                <ontime
+                    jcr:primaryType="cq:Widget"
+                    ctCls="cq-propsdialog-ontime"
+                    fieldLabel="On Time"
+                    name="./onTime"
+                    xtype="datetime"/>
+            </items>
+        </onofftime>
+    </items>
+</jcr:root>

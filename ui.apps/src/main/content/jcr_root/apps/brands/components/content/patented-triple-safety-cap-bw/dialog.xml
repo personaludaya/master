@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Title"
+                        fieldDescription="The title."
+                        name="./title_t"
+                        xtype="textfield"/>
+                   <intro-copy_t
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Introduction Copy"
+                        fieldDescription="The introduction content copy."
+                        name="./intro-copy_t"
+                        xtype="textarea"/>
+                   <patented-content
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The patented content copy."
+                        fieldLabel="Patented Copy"
+                        name="./patented-content"
+                        xtype="multicompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <img-path
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The image path."
+                                fieldLabel="Image path"
+                                name="img-path"
+                                xtype="pathfield"/>
+                            <img-alt_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The image alternate text."
+                                fieldLabel="Image Alt Text"
+                                name="img-alt_t"
+                                xtype="textfield"/>
+                            <title_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The title. e.g. &lt;b&gt; SEE &lt;/b&gt; the difference"
+                                fieldLabel="Title"
+                                name="title_t"
+                                xtype="textfield"/>
+                            <copy_t
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="The content copy."
+                                fieldLabel="Copy"
+                                name="copy_t"
+                                xtype="textarea"/>
+                        </fieldConfigs>
+                    </patented-content>
+                     <recap-copy_t
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Recap Copy"
+                        fieldDescription="The recap content copy."
+                        name="./recap-copy_t"
+                        xtype="textarea"/>
+                </items>
+            </general>
+            <cta
+                jcr:primaryType="cq:Panel"
+                title="CTA">
+                 <items jcr:primaryType="cq:WidgetCollection">
+	                 <cta-config
+	                        jcr:primaryType="cq:Widget"
+	                        path="/apps/brands/components/common/common-cta-bw/tab_cta/items/basic/items.infinity.json"
+	                        xtype="cqinclude"/>
+                 </items>
+            </cta>
+        </items>
+    </items>
+</jcr:root>

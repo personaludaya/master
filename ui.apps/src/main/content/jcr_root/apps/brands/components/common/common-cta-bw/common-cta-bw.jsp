@@ -1,0 +1,1 @@
+<%@include file="/apps/brands/global/global.jsp" %>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/brands"
+        cq:lastModified="{Date}2016-11-25T15:42:11.985+08:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/brands/templates/content-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Test 01"
+        sling:redirectStatus="{Long}301"
+        sling:resourceType="brands/components/page/contentpage-bw">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <section_container_bw
+                jcr:created="{Date}2016-11-25T14:57:09.599+08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-11-25T14:57:09.599+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brands/components/common/section-container-bw">
+                <section-container-par
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys">
+                    <header_title_bw
+                        jcr:created="{Date}2016-11-25T14:57:14.309+08:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2016-11-25T15:42:11.983+08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="brands/components/content/header-title-bw"
+                        cta-icon="icon-arrow-right"
+                        cta-open-new-win="true"
+                        cta-path="/content/geometrixx/en/toolbar/contacts"
+                        cta-style="view-all"
+                        cta-text="viewinonlinestore"
+                        header-alignment="text-center"
+                        header-size="h2"
+                        header-style="secondary-color"
+                        header-title_t="Promotions"/>
+                </section-container-par>
+            </section_container_bw>
+        </par>
+    </jcr:content>
+</jcr:root>

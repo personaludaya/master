@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <admin
+                jcr:primaryType="cq:Panel"
+                title="Admin">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The title of the store."
+                        fieldLabel="Title"
+                        name="./title_t"
+                        xtype="textfield"/>
+                    <img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The image path."
+                        fieldLabel="Image Path"
+                        name="./img-path"
+                        xtype="pathfield"/>
+                    <img-alt_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The image alternate text. If this is blank, will use “Title”."
+                        fieldLabel="Image Alt Text"
+                        name="./img-alt_t"
+                        xtype="textfield"/>
+                    <cta-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The CTA path."
+                        fieldLabel="CTA Path"
+                        name="./cta-path"
+                        xtype="pathfield"/>
+                    <cta-open-new-win
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check if the CTA is to be opened in new window."
+                        fieldLabel="CTA Open New Window"
+                        name="./cta-open-new-win"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </admin>
+        </items>
+    </items>
+</jcr:root>

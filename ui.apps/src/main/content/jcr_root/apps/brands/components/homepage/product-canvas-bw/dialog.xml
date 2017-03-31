@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <prdt-canvas-lifestages
+                jcr:primaryType="cq:Panel"
+                title="Life Stages">
+                <items jcr:primaryType="cq:WidgetCollection">
+                	<lifestages-header
+                    	jcr:primaryType="cq:Widget"
+                    	fieldLabel="Header text"
+                    	name="./lifestages-header"
+                    	xtype="textfield"/>
+                	<prdt-path
+                    	jcr:primaryType="cq:Widget"
+                    	fieldLabel="Path to Product Page"
+                    	name="./prdt-path"
+                    	xtype="pathfield"/>
+                    <lifestages
+                    	jcr:primaryType="cq:Widget"
+                        fieldDescription="Tags to appear for selection"
+                        fieldLabel="Product Life Stages"
+                        name="./lifestages"
+                        xtype="multifield">
+                        <fieldConfig
+					        jcr:primaryType="cq:Widget"
+				        	xtype="multifieldpanel">
+					        <items jcr:primaryType="cq:WidgetCollection">
+					        	<lifestage-tag
+					            	jcr:primaryType="cq:Widget"
+					                fieldLabel="Tag"
+					                key="tag"
+					                namespaces="[brands]"
+					                eaemMaxTags="1"
+					                xtype="tags"/>
+					        </items>
+					    </fieldConfig>
+					</lifestages>
+                </items>
+            </prdt-canvas-lifestages>
+            <prdt-canvas-popular
+                jcr:primaryType="cq:Panel"
+                title="Popular Products">
+                <items jcr:primaryType="cq:WidgetCollection">
+                	<products
+			            jcr:primaryType="cq:Widget"
+			            fieldLabel="Products"
+			            name="./products"
+			            xtype="multicompositefield">
+			            <fieldConfigs 
+			            	jcr:primaryType="cq:WidgetCollection">
+			            	<path
+			                    jcr:primaryType="cq:Widget"
+			                    fieldLabel="Path"
+			                    name="path"
+			                    xtype="pathfield"/>
+			                <description_t
+			                    jcr:primaryType="cq:Widget"
+			                    fieldLabel="Description"
+			                    name="description_t"
+			                    xtype="textfield"/>
+			                <cta-text_t
+			                    jcr:primaryType="cq:Widget"
+			                    fieldLabel="CTA Text"
+			                    name="cta-text_t"
+			                    xtype="textfield"/>
+			            </fieldConfigs>
+			        </products>
+                </items>
+            </prdt-canvas-popular>
+        </items>
+    </items>
+</jcr:root>

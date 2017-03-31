@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <prdt-signposts
+                jcr:primaryType="cq:Panel"
+                title="Product Signposts">
+                <items jcr:primaryType="cq:WidgetCollection">
+                     <prdt-signpost-paths
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The product signpost paths."
+                        fieldLabel="Product Signpost Paths"
+                        name="./prdt-signpost-paths"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="pathfield"/>
+                     </prdt-signpost-paths>
+					 <show-compare-checkbox
+						jcr:primaryType="cq:Widget"
+				        fieldDescription="Check if this should be shown the Compare checkbox."
+				        fieldLabel="Show Compare Checkbox"
+				        name="./show-compare-checkbox"
+				        type="checkbox"
+				        xtype="selection"/>
+                </items>
+            </prdt-signposts>
+            <content-signposts
+                jcr:primaryType="cq:Panel"
+                title="Content Signpost">
+                <items jcr:primaryType="cq:WidgetCollection">
+                     <content-signpost-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The content signpost admin path."
+                        fieldLabel="Content Signpost Admin Path"
+                        name="./content-signpost-path"
+                        xtype="pathfield" />
+                </items>
+            </content-signposts>
+        </items>
+    </items>
+</jcr:root>

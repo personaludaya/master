@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    autoWidth="true"
+    title="Article">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <article
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Details"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                 <published-date
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="true"
+                    fieldDescription="The article published date."
+                    fieldLabel="Published Date"
+                    name="./published-date"
+                    xtype="datetime"/>
+            </items>
+        </article>
+    </items>
+</jcr:root>

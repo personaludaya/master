@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <admin
+                jcr:primaryType="cq:Panel"
+                title="Admin">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <customer-name_t
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The customer name."
+                        fieldLabel="Customer Name"
+                        name="./customer-name_t"
+                        xtype="textfield"/>
+                    <customer-age
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The customer age."
+                        fieldLabel="Customer Age"
+                        name="./customer-age"
+                        xtype="textfield"/>
+                    <customer-saluation_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The customer salutation."
+                        fieldLabel="Customer Saluation"
+                        name="./customer-saluation_t"
+                        xtype="textfield"/>
+                    <customer-img-path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The image path."
+                        fieldLabel="Customer Image Path"
+                        name="./customer-img-path"
+                        xtype="pathfield"/>
+                    <customer-img-alt_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The image alternate text. If this is blank, will use “Customer Name”. "
+                        fieldLabel="Customer Image Alt Text"
+                        name="./customer-img-alt_t"
+                        xtype="textfield"/>
+                    <customer-review_t
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The customer review content."
+                        fieldLabel="Customer Review"
+                        name="./customer-review_t"
+                        xtype="textarea"/>
+                </items>
+            </admin>
+        </items>
+    </items>
+</jcr:root>
